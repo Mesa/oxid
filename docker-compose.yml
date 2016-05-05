@@ -1,0 +1,9 @@
+version: '2'
+services:
+    oxid:
+        build: ./
+        container_name: oxid
+        ports:
+            - "80:80"
+        volumes:
+            - "/etc/localtime:/etc/localtime"
