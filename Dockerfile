@@ -19,12 +19,47 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     && a2enmod php5 \
     && a2enmod rewrite
 
+# PHP configuration
+ENV PHP_ERROR_REPORTING "E_ERROR | E_WARNING | E_PARSE"
+ENV PHP_MEMORY_LIMIT "256M"
+ENV PHP_DATE_TIMEZONE "Europe/Berlin"
+ENV PHP_DISPLAY_ERRORS "Off"
+ENV PHP_UPLOAD_MAX_FILESIZE  "8m"
+
+# Apache configuration
+ENV DOCKER_DOCUMENT_ROOT "/data/"
+ENV DOCKER_SERVER_ADMIN "admin@localhost"
+ENV DOCKER_ERROR_LOG "/dev/stdout"
+ENV DOCKER_CUSTOM_LOG "/dev/stdout combined"
+ENV DOCKER_ALLOW_OVERRIDE "All"
+
+ENV APACHE_RUN_USER "www-data"
+ENV APACHE_RUN_GROUP "www-data"
+ENV APACHE_LOG_DIR "/dev/stdout"
+ENV APACHE_LOCK_DIR "/var/lock/apache"
+ENV APACHE_PID_FILE "/tmp/apache2.pid"
+ENV APACHE_SERVERNAME "localhost"
+
+# admin credentials are changed on every container run
+ENV OXID_ADMIN_PASSWORD "docker"
+ENV OXID_ADMIN_USERNAME "docker"
+
+# OXID configuration for config.inc.php
+ENV OXID_SHOP_URL "http://localhost"
+ENV OXID_UTF_MODE 1
+ENV OXID_IDEBUG 0
+ENV OXID_COMPILE_DIR "/tmp"
+
+# OXID configuration, equal names for mariaDB/mysql container vars
+ENV MYSQL_HOST "oxid_db"
+ENV MYSQL_USER "oxid"
+ENV MYSQL_PASSWORD "oxid"
+ENV MYSQL_DATABASE "oxid"
+
 COPY apache-config.conf /etc/apache2/sites-enabled/000-default.conf
 COPY php.ini /etc/php5/apache2/php.ini
-COPY init.sh /tmp/init.sh
 
-RUN chmod 0777 /tmp/init.sh; \
-    cd /tmp ; \
+RUN cd /tmp ; \
     wget https://github.com/OXID-eSales/oxideshop_ce/archive/v4.9.8.zip && \
     unzip  v4.9.8.zip -d /tmp/data/ && \
     mv /tmp/data/oxideshop_ce-4.9.8/source /data && \
@@ -41,42 +76,11 @@ RUN chmod 0777 /tmp/init.sh; \
     chmod 0770 /data/.htaccess; \
     rm -rf /data/setup;
 
-ENV PHP_ERROR_REPORTING "E_ERROR | E_WARNING | E_PARSE"
-ENV PHP_MEMORY_LIMIT "256M"
-ENV PHP_DATE_TIMEZONE "Europe/Berlin"
-ENV PHP_DISPLAY_ERRORS "Off"
-ENV PHP_UPLOAD_MAX_FILESIZE  "8m"
 
-ENV DOCKER_DOCUMENT_ROOT "/data/"
-ENV DOCKER_SERVER_ADMIN "admin@localhost"
-ENV DOCKER_ERROR_LOG "/dev/stdout"
-ENV DOCKER_CUSTOM_LOG "/dev/stdout combined"
-ENV DOCKER_ALLOW_OVERRIDE All
-
-ENV APACHE_RUN_USER "www-data"
-ENV APACHE_RUN_GROUP "www-data"
-ENV APACHE_LOG_DIR "/dev/stdout"
-ENV APACHE_LOCK_DIR "/var/lock/apache"
-ENV APACHE_PID_FILE "/tmp/apache2.pid"
-ENV APACHE_SERVERNAME "localhost"
-
-ENV OXID_ADMIN_PASSWORD "docker"
-ENV OXID_ADMIN_USERNAME "docker"
-ENV OXID_SHOP_URL "http://localhost"
-ENV OXID_UTF_MODE 1
-ENV OXID_IDEBUG 0
-ENV OXID_COMPILE_DIR "/tmp"
-
-ENV MYSQL_HOST "oxid_db"
-ENV MYSQL_USER "oxid"
-ENV MYSQL_PASSWORD "oxid"
-ENV MYSQL_DATABASE "oxid"
-
+# Set apache server name to global variable
 RUN echo "ServerName ${APACHE_SERVERNAME}" | tee /etc/apache2/conf-available/fqdn.conf ; \
-    ln -s /etc/apache2/conf-available/fqdn.conf /etc/apache2/conf-enabled/
-
-
-RUN chmod 0444 /data/config.inc.php; \
+    ln -s /etc/apache2/conf-available/fqdn.conf /etc/apache2/conf-enabled/; \
+    chmod 0444 /data/config.inc.php; \
     sed -i "s/Directory \/var\/www\//Directory \$\{DOCKER_DOCUMENT_ROOT\}/" /etc/apache2/apache2.conf; \
     sed -i "s/'<dbHost_ce>'/getenv('MYSQL_HOST')/" /data/config.inc.php; \
     sed -i "s/'<dbName_ce>'/getenv('MYSQL_DATABASE')/" /data/config.inc.php; \
@@ -88,10 +92,14 @@ RUN chmod 0444 /data/config.inc.php; \
     sed -i "s/'<sCompileDir_ce>'/getenv('OXID_COMPILE_DIR')/" /data/config.inc.php; \
     sed -i "s/'<iUtfMode>'/getenv('OXID_IDEBUG')/" /data/config.inc.php;
 
-
 VOLUME /data/modules
 VOLUME /data/out
 
 EXPOSE 80
 
-CMD /tmp/init.sh
+COPY init.sh /tmp/
+
+RUN chmod 0777 /tmp/init.sh
+
+EXPOSE 80
+CMD ["/tmp/init.sh"]
