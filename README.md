@@ -2,13 +2,12 @@ Oxid Docker
 =========
 
 This is an unofficial Docker image for OXID eShop Community Edition.
+
 This images is based on Ubuntu 15.10, Apache2, PHP 5.6 and the current OXID CE version 4.9.8.
 
-## Requirements ##
-Use [docker-compose](https://docs.docker.com/compose/) to create your container.
-
-You need a database like MariaDB or MYSQL, with all OXID tables installed or you take the prepared mysql dump
-from the demo folder [oxid.sql](demo/db-dumps/oxid.sql).
+#### Requirements ####
+You need [docker-compose](https://docs.docker.com/compose/) to create your container and use
+the docker-compose.yml file.
 
 
 ## Getting started ##
@@ -27,6 +26,8 @@ services:
             - oxid_db:oxid_db
         volumes:
             - "/etc/localtime:/etc/localtime"
+            - "./public/out/my_module:/data/out/my_module"
+            - "./public/modules/my_module:/data/modules/my_module"
 
         environment:
             MYSQL_HOST: oxid_db
@@ -63,7 +64,6 @@ Execute:
 ```bash
 docker-compose up
 ```
-
 wait and have fun.
 
 Dont forget to change your admin user name and password in your docker-compose.yml, the default values are "oxid".
@@ -74,18 +74,19 @@ OXID_ADMIN_PASSWORD: oxid
 OXID_ADMIN_USERNAME: oxid
 ```
 
-It takes up to 20 Seconds until your changed password is changed and written to the database.
+It takes up to 20 Seconds until your changed password is written to the database.
 
 
 
-##### Backup #####
+### Backup ###
 
-Change database name, user and password to your config values and your
+Change database name, user and password to your config values.
 ```bash
 docker exec -i oxid_db mysqldump oxid -u oxid -poxid > oxid.sql
 
 docker exec -i oxid_db mysqldump oxid -u oxid -poxid > oxid.sql
 ```
+
 
 ### Environment Variables ###
 
@@ -147,13 +148,7 @@ MYSQL_DATABASE "oxid"
 * OXID eShop Community Edition. 4.9.8
 * Apache/2.4.12 (Ubuntu)
 * Ubuntu 15.10
+* PHP 5.6.11
 
-
-
-## [Docker MariaDB](https://hub.docker.com/_/mariadb/) ##
-Put your database sql dump inside the folder `db-dumps` and on every rebuild of
-your database container the sql inside
-
-
-## License
+##### License #####
 The MIT License (MIT)
