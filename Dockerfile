@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:15.10
 
 MAINTAINER Daniel Langemann <daniel.langemann@gmx.de>
 
