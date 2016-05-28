@@ -1,9 +1,10 @@
 Oxid Docker
+
 =========
 
 This is an unofficial Docker image for OXID eShop Community Edition.
 
-This images is based on Ubuntu 15.10, Apache2, PHP 5.6 and the current OXID CE version 4.9.8.
+This images is based on Ubuntu 16.04, Apache2, PHP 5.6 and the current OXID CE version 4.9.8
 
 #### Requirements ####
 You need [docker-compose](https://docs.docker.com/compose/) to create your container and use
@@ -11,6 +12,13 @@ the docker-compose.yml file.
 
 
 ## Getting started ##
+
+Copy all files from [demo](https://github.com/Mesa/oxid/tree/master/demo) subfolder
+and run
+```bash
+docker-compose up
+```
+
 
 Create a docker-compose.yml with following content:
 
@@ -48,13 +56,11 @@ services:
         volumes:
             - "./db-dumps/:/docker-entrypoint-initdb.d/"
 
-
         environment:
             MYSQL_ROOT_PASSWORD: 25d8341295ed88e4bcfc871970a5bda4
             MYSQL_DATABASE: oxid
             MYSQL_USER: oxid
             MYSQL_PASSWORD: oxid
-
 ```
 Create a folder named `db-dumps` and put the [demo/db-dumps/oxid.sql](demo/db-dumps/oxid.sql) there
 
@@ -145,10 +151,11 @@ MYSQL_DATABASE "oxid"
 
 
 ### Versions: ###
-* OXID eShop Community Edition. 4.9.8
+* OXID eShop Community Edition. 4.9.8 
 * Apache/2.4.12 (Ubuntu)
-* Ubuntu 15.10
+* Ubuntu 16.04 
 * PHP 5.6.11
 
 ##### License #####
 The MIT License (MIT)
+

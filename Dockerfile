@@ -1,22 +1,25 @@
-FROM ubuntu:15.10
+FROM ubuntu:16.04
 
 MAINTAINER Daniel Langemann <daniel.langemann@gmx.de>
+
+RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu xenial main" > /etc/apt/sources.list.d/ondrej_php.list; \
+    echo "deb-src http://ppa.launchpad.net/ondrej/php/ubuntu xenial main " >> /etc/apt/sources.list.d/ondrej_php.list; \
+    apt-key adv --recv-keys --keyserver keyserver.ubuntu.com E5267A6C
 
 RUN apt-get update; apt-get -y upgrade --fix-missing;
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     apache2 \
-    libapache2-mod-php5 \
-    php5-mysql \
-    php5-gd \
-    php5-json \
-    unzip \
-    php5-curl \
+    libapache2-mod-php5.6 \
+    php5.6-mysql \
+    php5.6-gd \
+    php5.6-xml \
+    php5.6-json \
+    php5.6-curl \
     curl \
     mysql-client \
-    wget \
     && apt-get autoremove -y \
     && apt-get autoclean -y \
-    && a2enmod php5 \
+    && a2enmod php5.6 \
     && a2enmod rewrite
 
 # PHP configuration
@@ -58,13 +61,10 @@ ENV MYSQL_DATABASE "oxid"
 
 COPY apache-config.conf /etc/apache2/sites-enabled/000-default.conf
 COPY php.ini /etc/php5/apache2/php.ini
+COPY oxid.tar.gz /tmp/oxid.tar.gz
 
-RUN cd /tmp ; \
-    wget https://github.com/OXID-eSales/oxideshop_ce/archive/v4.9.8.zip && \
-    unzip  v4.9.8.zip -d /tmp/data/ && \
-    mv /tmp/data/oxideshop_ce-4.9.8/source /data && \
-    rm -rf /tmp/data && \
-    rm v4.9.8.zip ; \
+RUN mkdir /data; \
+    tar -xzf /tmp/oxid.tar.gz -C /data; \
     chown -R www-data:www-data /data; \
     chmod -R ug+rwx /data; \
     chmod -R 0770 /data/out/media ; \
@@ -74,7 +74,7 @@ RUN cd /tmp ; \
     chmod -R 0770 /data/export; \
     chmod -R 0440 /data/config.inc.php; \
     chmod 0770 /data/.htaccess; \
-    rm -rf /data/setup;
+    rm /tmp/oxid.tar.gz
 
 
 # Set apache server name to global variable
@@ -93,12 +93,12 @@ RUN echo "ServerName ${APACHE_SERVERNAME}" | tee /etc/apache2/conf-available/fqd
     sed -i "s/'<iUtfMode>'/getenv('OXID_IDEBUG')/" /data/config.inc.php;
 
 VOLUME /data/modules
+VOLUME /data/application/views
 VOLUME /data/out
 
 EXPOSE 80
 
 COPY init.sh /tmp/
-
 RUN chmod 0777 /tmp/init.sh
 
 EXPOSE 80
