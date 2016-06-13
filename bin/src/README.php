@@ -3,12 +3,11 @@
 ob_start();
 include __DIR__ . "/config.php";
 ?>
-Oxid Docker
 
-=========
+Oxid Docker
+===========
 
 This is an unofficial Docker image for OXID eShop Community Edition.
-
 This images is based on Ubuntu <?= UBUNTU_VERSION ?>, Apache2, PHP 5.6 and the current OXID CE version <?= OXID_VERSION ?>
 
 
