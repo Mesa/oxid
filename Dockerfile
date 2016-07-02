@@ -16,13 +16,15 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     php5.6-json \
     php5.6-curl \
     curl \
+    wget \
+    unzip \
     mysql-client \
     && apt-get autoremove -y \
     && apt-get autoclean -y \
     && a2enmod php5.6 \
     && a2enmod rewrite
 
-ENV OXID_VERSION 4.10.0
+ENV OXID_VERSION "4.10.0"
 
 # PHP configuration
 ENV PHP_ERROR_REPORTING "E_ERROR | E_WARNING | E_PARSE"
@@ -63,11 +65,10 @@ ENV MYSQL_DATABASE "oxid"
 
 COPY apache-config.conf /etc/apache2/sites-enabled/000-default.conf
 COPY php.ini /etc/php5/apache2/php.ini
-RUN mkdir /data; \
-    cd /tmp; \
-    wget https://github.com/OXID-eSales/oxideshop_ce/archive/$OXID_VERSION.zip; unzip $OXID_VERSION.zip "/oxideshop_ce-${OXID_VERSION}/source/*" -d /tmp/oxid ; \
-    mv /tmp/oxid/oxideshop_ce-${OXID_VERSION}/source/* /data; \
-    rm -rf /tmp/oxid;
+
+COPY install.sh /install.sh
+RUN chmod +x /install.sh;
+RUN /install.sh
 
 RUN chown -R www-data:www-data /data; \
     chmod -R ug+rwx /data; \
@@ -77,9 +78,7 @@ RUN chown -R www-data:www-data /data; \
     chmod -R 0770 /data/tmp; \
     chmod -R 0770 /data/export; \
     chmod -R 0440 /data/config.inc.php; \
-    chmod 0770 /data/.htaccess; \
-    rm /tmp/oxid.tar.gz
-
+    chmod 0770 /data/.htaccess;
 
 # Set apache server name to global variable
 RUN echo "ServerName ${APACHE_SERVERNAME}" | tee /etc/apache2/conf-available/fqdn.conf ; \
@@ -102,8 +101,8 @@ VOLUME /data/out
 
 EXPOSE 80
 
-COPY init.sh /tmp/
-RUN chmod 0777 /tmp/init.sh
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
 
-EXPOSE 80
-CMD ["/tmp/init.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD /usr/sbin/apache2ctl -D FOREGROUND
