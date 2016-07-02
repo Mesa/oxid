@@ -22,6 +22,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     && a2enmod php5.6 \
     && a2enmod rewrite
 
+ENV OXID_VERSION 4.10.0
+
 # PHP configuration
 ENV PHP_ERROR_REPORTING "E_ERROR | E_WARNING | E_PARSE"
 ENV PHP_MEMORY_LIMIT "256M"
@@ -61,11 +63,13 @@ ENV MYSQL_DATABASE "oxid"
 
 COPY apache-config.conf /etc/apache2/sites-enabled/000-default.conf
 COPY php.ini /etc/php5/apache2/php.ini
-COPY oxid.tar.gz /tmp/oxid.tar.gz
-
 RUN mkdir /data; \
-    tar -xzf /tmp/oxid.tar.gz -C /data; \
-    chown -R www-data:www-data /data; \
+    cd /tmp; \
+    wget https://github.com/OXID-eSales/oxideshop_ce/archive/$OXID_VERSION.zip; unzip $OXID_VERSION.zip "/oxideshop_ce-${OXID_VERSION}/source/*" -d /tmp/oxid ; \
+    mv /tmp/oxid/oxideshop_ce-${OXID_VERSION}/source/* /data; \
+    rm -rf /tmp/oxid;
+
+RUN chown -R www-data:www-data /data; \
     chmod -R ug+rwx /data; \
     chmod -R 0770 /data/out/media ; \
     chmod -R 0770 /data/out/pictures; \
