@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
-docker images mesa/oxid
+#  Get script path to ignore the current working directory and execute this script from every where
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+pushd $DIR
 
-echo "Version nr.:"
-read version
-
+# Build script for testing the Docker container
 docker-compose build
 docker tag oxiddocker_oxid mesa/oxid:latest
-docker tag mesa/oxid:latest mesa/oxid:$version
 
 docker rmi oxiddocker_oxid
+
+popd
