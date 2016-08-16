@@ -3,7 +3,7 @@ Oxid Docker
 ===========
 
 This is an unofficial Docker image for OXID eShop Community Edition.
-This images is based on Ubuntu 16.04, Apache2, PHP 5.6 and the current OXID CE version 4.10.0
+This images is based on Ubuntu 16.04, Apache2, PHP 5.6 and the current OXID CE version 4.10.1
 
 #### Requirements ####
 You need [docker-compose](https://docs.docker.com/compose/) to create your container and use
@@ -55,24 +55,28 @@ services:
         volumes:
             - "./db-dumps/:/docker-entrypoint-initdb.d/"
 
-        environment:
-            MYSQL_ROOT_PASSWORD: 25d8341295ed88e4bcfc871970a5bda4
-            MYSQL_DATABASE: oxid
-            MYSQL_USER: oxid
-            MYSQL_PASSWORD: oxid
-```
-Create a folder named `db-dumps` and put the [demo/db-dumps/oxid.sql](demo/db-dumps/oxid.sql) there
+#           Store your mysql db local in this mounted folder
+#           - "./mysql:/var/lib/mysql"
 
+        environment:
+            MYSQL_ROOT_PASSWORD:  25d8341295ed88e4bcfc871970a5bda4
+            MYSQL_DATABASE:       oxid
+            MYSQL_USER:           oxid
+            MYSQL_PASSWORD:       oxid
+```
+Create a folder named `db-dumps` and put the [demo/db-dumps/oxid.sql](demo/db-dumps/oxid.sql) in there.
+During the first image run, the sql dump will be imported, with an existing database (after the first container run)
+the sql dump file will be ignored.
 
 Execute:
 
 ```bash
 docker-compose up
 ```
-wait and have fun.
+and visit [http://localhost](localhost). There is no need to run execute the oxid setup, just use the demo dump sql.
 
 Dont forget to change your admin user name and password in your docker-compose.yml, the default values are "oxid".
-Only idiots don't change default passwords and you are no idiot aren't you.
+Only idiots don't change default passwords and you are no idiot, aren't you.
 
 ```
 OXID_ADMIN_PASSWORD: oxid
@@ -150,10 +154,10 @@ MYSQL_DATABASE "oxid"
 
 
 ### Versions: ###
-* OXID eShop Community Edition. 4.10.0 
-* Apache/2.4.12 (Ubuntu)
+* OXID eShop Community Edition. 4.10.1 
+* Apache/2.4.18 (Ubuntu)
 * Ubuntu 16.04 
-* PHP 5.6.11
+* PHP 5.6.24
 
 ##### License #####
 The MIT License (MIT)

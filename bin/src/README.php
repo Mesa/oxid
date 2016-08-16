@@ -1,8 +1,5 @@
 #!/usr/bin/env php
-<?php
-ob_start();
-include __DIR__ . "/config.php";
-?>
+<?php ob_start(); include __DIR__ . "/config.php"; ?>
 
 Oxid Docker
 ===========
@@ -30,18 +27,19 @@ Create a docker-compose.yml with following content:
 ```yaml
 <?php include __DIR__ . "/../../demo/docker-compose.yml"; ?>
 ```
-Create a folder named `db-dumps` and put the [demo/db-dumps/oxid.sql](demo/db-dumps/oxid.sql) there
-
+Create a folder named `db-dumps` and put the [demo/db-dumps/oxid.sql](demo/db-dumps/oxid.sql) in there.
+During the first image run, the sql dump will be imported, with an existing database (after the first container run)
+the sql dump file will be ignored.
 
 Execute:
 
 ```bash
 docker-compose up
 ```
-wait and have fun.
+and visit [http://localhost](localhost). There is no need to run execute the oxid setup, just use the demo dump sql.
 
 Dont forget to change your admin user name and password in your docker-compose.yml, the default values are "oxid".
-Only idiots don't change default passwords and you are no idiot aren't you.
+Only idiots don't change default passwords and you are no idiot, aren't you.
 
 ```
 OXID_ADMIN_PASSWORD: oxid
@@ -120,7 +118,7 @@ MYSQL_DATABASE "oxid"
 
 ### Versions: ###
 * OXID eShop Community Edition. <?= OXID_VERSION ?> 
-* Apache/2.4.12 (Ubuntu)
+* Apache/<?= APACHE_VERSION ?> (Ubuntu)
 * Ubuntu <?= UBUNTU_VERSION ?> 
 * PHP <?= PHPVERSION ?>
 

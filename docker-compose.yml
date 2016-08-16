@@ -7,3 +7,5 @@ services:
             - "80:80"
         volumes:
             - "/etc/localtime:/etc/localtime"
+        environment:
+            MYSQL_HOST: oxid_db

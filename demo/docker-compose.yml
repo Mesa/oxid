@@ -31,8 +31,11 @@ services:
         volumes:
             - "./db-dumps/:/docker-entrypoint-initdb.d/"
 
+#           Store your mysql db local in this mounted folder
+#           - "./mysql:/var/lib/mysql"
+
         environment:
-            MYSQL_ROOT_PASSWORD: 25d8341295ed88e4bcfc871970a5bda4
-            MYSQL_DATABASE: oxid
-            MYSQL_USER: oxid
-            MYSQL_PASSWORD: oxid
+            MYSQL_ROOT_PASSWORD:  25d8341295ed88e4bcfc871970a5bda4
+            MYSQL_DATABASE:       oxid
+            MYSQL_USER:           oxid
+            MYSQL_PASSWORD:       oxid

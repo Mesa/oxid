@@ -15,6 +15,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     php5.6-xml \
     php5.6-json \
     php5.6-curl \
+    php5.6-mbstring \
+    php5.6-bcmath \
+    php5.6-soap \
     curl \
     wget \
     unzip \
@@ -24,7 +27,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     && a2enmod php5.6 \
     && a2enmod rewrite
 
-ENV OXID_VERSION "4.10.0"
+ENV OXID_VERSION "4.10.1"
 
 # PHP configuration
 ENV PHP_ERROR_REPORTING "E_ERROR | E_WARNING | E_PARSE"

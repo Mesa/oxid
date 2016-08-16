@@ -30,7 +30,7 @@ for i in {0..60}; do
         break
     fi
 
-    echo "${i} - Trying to connect to MySQL ...  "
+    echo "Trying to connect to MySQL ...  ${i}."
     sleep 1
 done
 
