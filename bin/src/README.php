@@ -36,7 +36,7 @@ Execute:
 ```bash
 docker-compose up
 ```
-and visit [http://localhost](localhost). There is no need to run execute the oxid setup, just use the demo dump sql.
+and visit [localhost](http://localhost). There is no need to run execute the oxid setup, just use the demo dump sql.
 
 Dont forget to change your admin user name and password in your docker-compose.yml, the default values are "oxid".
 Only idiots don't change default passwords and you are no idiot, aren't you.
