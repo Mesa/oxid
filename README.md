@@ -3,7 +3,7 @@ Oxid Docker
 ===========
 
 This is an unofficial Docker image for OXID eShop Community Edition.
-This images is based on Ubuntu 16.04, Apache2, PHP 5.6 and the current OXID CE version 4.10.1
+This images is based on Ubuntu 16.04, Apache2, PHP 5.6 and the current OXID CE version 4.10.2
 
 #### Requirements ####
 You need [docker-compose](https://docs.docker.com/compose/) to create your container and use
@@ -83,9 +83,6 @@ OXID_ADMIN_PASSWORD: oxid
 OXID_ADMIN_USERNAME: oxid
 ```
 
-It takes up to 20 Seconds until your changed password is written to the database.
-
-
 
 ### Backup ###
 
@@ -154,7 +151,7 @@ MYSQL_DATABASE "oxid"
 
 
 ### Versions: ###
-* OXID eShop Community Edition. 4.10.1 
+* OXID eShop Community Edition. 4.10.2 
 * Apache/2.4.18 (Ubuntu)
 * Ubuntu 16.04 
 * PHP 5.6.24

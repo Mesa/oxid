@@ -46,9 +46,6 @@ OXID_ADMIN_PASSWORD: oxid
 OXID_ADMIN_USERNAME: oxid
 ```
 
-It takes up to 20 Seconds until your changed password is written to the database.
-
-
 
 ### Backup ###
 
