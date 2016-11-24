@@ -1,3 +1,6 @@
+# This is only the composer build file used by the automated build process for dockerhub
+#
+# for a real example see demo/docker-compose.yml
 version: '2'
 services:
     oxid:
