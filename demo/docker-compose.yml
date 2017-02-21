@@ -21,6 +21,7 @@ services:
             OXID_IDEBUG: 0
             OXID_ADMIN_PASSWORD: oxid
             OXID_ADMIN_USERNAME: oxid
+            OXID_COMPILE_DIR: "/data/tmp"
 
     oxid_db:
         image: mariadb:latest

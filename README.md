@@ -45,6 +45,7 @@ services:
             OXID_IDEBUG: 0
             OXID_ADMIN_PASSWORD: oxid
             OXID_ADMIN_USERNAME: oxid
+            OXID_COMPILE_DIR: "/data/tmp"
 
     oxid_db:
         image: mariadb:latest
@@ -136,7 +137,7 @@ OXID configuration from  config.inc.php
 OXID_SHOP_URL "http://localhost"
 OXID_UTF_MODE 1
 OXID_IDEBUG 0
-OXID_COMPILE_DIR "/tmp"
+OXID_COMPILE_DIR "/data/tmp"
 ```
 
 OXID database configuration, equal names for mariaDB/mysql container variables.
