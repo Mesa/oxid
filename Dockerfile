@@ -27,7 +27,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     && a2enmod php5.6 \
     && a2enmod rewrite
 
-ENV OXID_VERSION "4.10.2"
+ENV OXID_VERSION "4.10.3"
 
 # PHP configuration
 ENV PHP_ERROR_REPORTING "E_ERROR | E_WARNING | E_PARSE"
@@ -58,7 +58,7 @@ ENV OXID_ADMIN_USERNAME "docker"
 ENV OXID_SHOP_URL "http://localhost"
 ENV OXID_UTF_MODE 1
 ENV OXID_IDEBUG 0
-ENV OXID_COMPILE_DIR "/tmp"
+ENV OXID_COMPILE_DIR "/data/tmp"
 
 # OXID configuration, equal names for mariaDB/mysql container vars
 ENV MYSQL_HOST "oxid_db"
@@ -66,8 +66,7 @@ ENV MYSQL_USER "oxid"
 ENV MYSQL_PASSWORD "oxid"
 ENV MYSQL_DATABASE "oxid"
 
-COPY apache-config.conf /etc/apache2/sites-enabled/000-default.conf
-COPY php.ini /etc/php5/apache2/php.ini
+COPY etc/ /etc
 
 COPY install.sh /install.sh
 RUN chmod +x /install.sh;
