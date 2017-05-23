@@ -3,7 +3,7 @@ Oxid Docker
 ===========
 
 This is an unofficial Docker image for OXID eShop Community Edition.
-This images is based on Ubuntu 16.04, Apache2, PHP 5.6 and the current OXID CE version 4.10.3
+This images is based on Ubuntu 16.04, Apache2, PHP 5.6 and the current OXID CE version 4.10.4
 
 #### Requirements ####
 You need [docker-compose](https://docs.docker.com/compose/) to create your container and use
@@ -152,7 +152,7 @@ MYSQL_DATABASE "oxid"
 
 
 ### Versions: ###
-* OXID eShop Community Edition. 4.10.3 
+* OXID eShop Community Edition. 4.10.4 
 * Apache/2.4.18 (Ubuntu)
 * Ubuntu 16.04 
 * PHP 5.6.30
