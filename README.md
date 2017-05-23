@@ -11,9 +11,7 @@ the docker-compose.yml file.
 
 
 ## Getting started ##
-
-Copy all files from [demo](https://github.com/Mesa/oxid/tree/master/demo) subfolder
-and run
+Copy all files from [demo](https://github.com/Mesa/oxid/tree/master/demo) sub folder and run
 ```bash
 docker-compose up
 ```
@@ -89,8 +87,6 @@ OXID_ADMIN_USERNAME: oxid
 
 Change database name, user and password to your config values.
 ```bash
-docker exec -i oxid_db mysqldump oxid -u oxid -poxid > oxid.sql
-
 docker exec -i oxid_db mysqldump oxid -u oxid -poxid > oxid.sql
 ```
 
