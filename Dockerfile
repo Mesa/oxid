@@ -27,7 +27,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     && a2enmod php5.6 \
     && a2enmod rewrite
 
-ENV OXID_VERSION "4.10.3"
+ENV OXID_VERSION "4.10.4"
 
 # PHP configuration
 ENV PHP_ERROR_REPORTING "E_ERROR | E_WARNING | E_PARSE"
