@@ -1,0 +1,1966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+List of all error codes
+-->
+
+
+<payone_errors>
+    <entry>
+        <error_code></error_code>
+        <error_message_en></error_message_en>
+        <error_message_de></error_message_de>
+    </entry>
+    <entry>
+        <error_code></error_code>
+        <error_message_en></error_message_en>
+        <error_message_de></error_message_de>
+    </entry>
+    <entry>
+        <error_code>1</error_code>
+        <error_message_en>Card issuer temporarily not available</error_message_en>
+        <error_message_de>Card issuer temporarily not available</error_message_de>
+    </entry>
+    <entry>
+        <error_code>2</error_code>
+        <error_message_en>Authorization declined</error_message_en>
+        <error_message_de>Authorization declined</error_message_de>
+    </entry>
+    <entry>
+        <error_code>4</error_code>
+        <error_message_en>Card not approved</error_message_en>
+        <error_message_de>Card not approved</error_message_de>
+    </entry>
+    <entry>
+        <error_code>5</error_code>
+        <error_message_en>Authorization declined</error_message_en>
+        <error_message_de>Authorization declined</error_message_de>
+    </entry>
+    <entry>
+        <error_code>7</error_code>
+        <error_message_en>Required CVC code not specified or not valid</error_message_en>
+        <error_message_de>Required CVC code not specified or not valid</error_message_de>
+    </entry>
+    <entry>
+        <error_code>12</error_code>
+        <error_message_en>Transaction invalid</error_message_en>
+        <error_message_de>Transaction invalid</error_message_de>
+    </entry>
+    <entry>
+        <error_code>13</error_code>
+        <error_message_en>Limit exceeded</error_message_en>
+        <error_message_de>Limit exceeded</error_message_de>
+    </entry>
+    <entry>
+        <error_code>14</error_code>
+        <error_message_en>Invalid card</error_message_en>
+        <error_message_de>Invalid card</error_message_de>
+    </entry>
+    <entry>
+        <error_code>21</error_code>
+        <error_message_en>Activity not processed</error_message_en>
+        <error_message_de>Activity not processed</error_message_de>
+    </entry>
+    <entry>
+        <error_code>30</error_code>
+        <error_message_en>Format Error in request message (e.g. CVC missing).</error_message_en>
+        <error_message_de>Format Error in request message (e.g. CVC missing).</error_message_de>
+    </entry>
+    <entry>
+        <error_code>31</error_code>
+        <error_message_en>Invalid card type</error_message_en>
+        <error_message_de>Invalid card type</error_message_de>
+    </entry>
+    <entry>
+        <error_code>33</error_code>
+        <error_message_en>Expiry date invalid, incorrect or in the past</error_message_en>
+        <error_message_de>Expiry date invalid, incorrect or in the past</error_message_de>
+    </entry>
+    <entry>
+        <error_code>34</error_code>
+        <error_message_en>Manipulation suspected</error_message_en>
+        <error_message_de>Manipulation suspected</error_message_de>
+    </entry>
+    <entry>
+        <error_code>43</error_code>
+        <error_message_en>Card stolen</error_message_en>
+        <error_message_de>Card stolen</error_message_de>
+    </entry>
+    <entry>
+        <error_code>56</error_code>
+        <error_message_en>Card unknown</error_message_en>
+        <error_message_de>Card unknown</error_message_de>
+    </entry>
+    <entry>
+        <error_code>62</error_code>
+        <error_message_en>Card cancelled</error_message_en>
+        <error_message_de>Card cancelled</error_message_de>
+    </entry>
+    <entry>
+        <error_code>80</error_code>
+        <error_message_en>Amount no longer available</error_message_en>
+        <error_message_de>Amount no longer available</error_message_de>
+    </entry>
+    <entry>
+        <error_code>91</error_code>
+        <error_message_en>Card issuer temporarily not available</error_message_en>
+        <error_message_de>Card issuer temporarily not available</error_message_de>
+    </entry>
+    <entry>
+        <error_code>101</error_code>
+        <error_message_en>The authorisation has expired.</error_message_en>
+        <error_message_de>The authorisation has expired.</error_message_de>
+    </entry>
+    <entry>
+        <error_code>102</error_code>
+        <error_message_en>Authorisation denied.</error_message_en>
+        <error_message_de>Authorisation denied.</error_message_de>
+    </entry>
+    <entry>
+        <error_code>103</error_code>
+        <error_message_en>Transaction could not be completed successfully.</error_message_en>
+        <error_message_de>Transaction could not be completed successfully.</error_message_de>
+    </entry>
+    <entry>
+        <error_code>104</error_code>
+        <error_message_en>Customer could not pay.</error_message_en>
+        <error_message_de>Customer could not pay.</error_message_de>
+    </entry>
+    <entry>
+        <error_code>105</error_code>
+        <error_message_en>The customer has to be redirected to Wallet Provider in order to select a new payment method.</error_message_en>
+        <error_message_de>The customer has to be redirected to Wallet Provider in order to select a new payment method.</error_message_de>
+    </entry>
+    <entry>
+        <error_code>106</error_code>
+        <error_message_en>The order has expired.</error_message_en>
+        <error_message_de>The order has expired.</error_message_de>
+    </entry>
+    <entry>
+        <error_code>107</error_code>
+        <error_message_en>Risk assessment has denied this transaction.</error_message_en>
+        <error_message_de>Risk assessment has denied this transaction.</error_message_de>
+    </entry>
+    <entry>
+        <error_code>108</error_code>
+        <error_message_en>The transaction has already been completed.</error_message_en>
+        <error_message_de>The transaction has already been completed.</error_message_de>
+    </entry>
+    <entry>
+        <error_code>109</error_code>
+        <error_message_en>Transaction (credit) denied</error_message_en>
+        <error_message_de>Transaction (credit) denied</error_message_de>
+    </entry>
+    <entry>
+        <error_code>110</error_code>
+        <error_message_en>Problem with mandate of customer at external service provider.</error_message_en>
+        <error_message_de>Problem with mandate of customer at external service provider.</error_message_de>
+    </entry>
+    <entry>
+        <error_code>201</error_code>
+        <error_message_en>The transaction was denied by iDEAL.</error_message_en>
+        <error_message_de>The transaction was denied by iDEAL.</error_message_de>
+    </entry>
+    <entry>
+        <error_code>202</error_code>
+        <error_message_en>The transaction was denied by PostFinance.</error_message_en>
+        <error_message_de>The transaction was denied by PostFinance.</error_message_de>
+    </entry>
+    <entry>
+        <error_code>250</error_code>
+        <error_message_en>SEPA mandate does not exist</error_message_en>
+        <error_message_de>SEPA mandate does not exist</error_message_de>
+    </entry>
+    <entry>
+        <error_code>251</error_code>
+        <error_message_en>SEPA mandate not confirmed</error_message_en>
+        <error_message_de>SEPA mandate not confirmed</error_message_de>
+    </entry>
+    <entry>
+        <error_code>252</error_code>
+        <error_message_en>SEPA mandate parameter not valid or missing</error_message_en>
+        <error_message_de>SEPA mandate parameter not valid or missing</error_message_de>
+    </entry>
+    <entry>
+        <error_code>253</error_code>
+        <error_message_en>SEPA configuration error</error_message_en>
+        <error_message_de>SEPA configuration error</error_message_de>
+    </entry>
+    <entry>
+        <error_code>254</error_code>
+        <error_message_en>Request not supported for this SEPA configuration</error_message_en>
+        <error_message_de>Request not supported for this SEPA configuration</error_message_de>
+    </entry>
+    <entry>
+        <error_code>255</error_code>
+        <error_message_en>SEPA mandate place of confirmation missing</error_message_en>
+        <error_message_de>SEPA mandate place of confirmation missing</error_message_de>
+    </entry>
+    <entry>
+        <error_code>301</error_code>
+        <error_message_en>Amount for this payment method too low</error_message_en>
+        <error_message_de>Amount for this payment method too low</error_message_de>
+    </entry>
+    <entry>
+        <error_code>303</error_code>
+        <error_message_en>Capture amount does not match financing amount</error_message_en>
+        <error_message_de>Capture amount does not match financing amount</error_message_de>
+    </entry>
+    <entry>
+        <error_code>304</error_code>
+        <error_message_en>Parameter Token is expired</error_message_en>
+        <error_message_de>Parameter Token is expired</error_message_de>
+    </entry>
+    <entry>
+        <error_code>305</error_code>
+        <error_message_en>Customer has not yet completed the transaction</error_message_en>
+        <error_message_de>Customer has not yet completed the transaction</error_message_de>
+    </entry>
+    <entry>
+        <error_code>306</error_code>
+        <error_message_en>Transaction already has customer payments</error_message_en>
+        <error_message_de>Transaction already has customer payments</error_message_de>
+    </entry>
+    <entry>
+        <error_code>307</error_code>
+        <error_message_en>Financing Provider does not secure this transaction</error_message_en>
+        <error_message_de>Financing Provider does not secure this transaction</error_message_de>
+    </entry>
+    <entry>
+        <error_code>308</error_code>
+        <error_message_en>Parameter {settleaccount{ does not fit to payment type financing</error_message_en>
+        <error_message_de>Parameter {settleaccount{ does not fit to payment type financing</error_message_de>
+    </entry>
+    <entry>
+        <error_code>701</error_code>
+        <error_message_en>Payment denied after BIN check</error_message_en>
+        <error_message_de>Payment denied after BIN check</error_message_de>
+    </entry>
+    <entry>
+        <error_code>702</error_code>
+        <error_message_en>Payment was denied because of the BIN country</error_message_en>
+        <error_message_de>Payment was denied because of the BIN country</error_message_de>
+    </entry>
+    <entry>
+        <error_code>703</error_code>
+        <error_message_en>Payment denied after IP check</error_message_en>
+        <error_message_de>Payment denied after IP check</error_message_de>
+    </entry>
+    <entry>
+        <error_code>704</error_code>
+        <error_message_en>Payment was denied because of the IP country</error_message_en>
+        <error_message_de>Payment was denied because of the IP country</error_message_de>
+    </entry>
+    <entry>
+        <error_code>710</error_code>
+        <error_message_en>Payment denied after POS check</error_message_en>
+        <error_message_de>Payment denied after POS check</error_message_de>
+    </entry>
+    <entry>
+        <error_code>721</error_code>
+        <error_message_en>Payment denied after Velocity IP check</error_message_en>
+        <error_message_de>Payment denied after Velocity IP check</error_message_de>
+    </entry>
+    <entry>
+        <error_code>722</error_code>
+        <error_message_en>Payment denied after Velocity card number check</error_message_en>
+        <error_message_de>Payment denied after Velocity card number check</error_message_de>
+    </entry>
+    <entry>
+        <error_code>723</error_code>
+        <error_message_en>Payment denied after Velocity account number check</error_message_en>
+        <error_message_de>Payment denied after Velocity account number check</error_message_de>
+    </entry>
+	    <entry>
+		<error_code>724</error_code>
+		<error_message_en>Payment denied after Velocity e-mail check</error_message_en>
+		<error_message_de>Payment denied after Velocity e-mail check</error_message_de>
+	</entry>
+    <entry>
+		<error_code>872</error_code>
+		<error_message_en>Pseudo card PAN not found</error_message_en>
+		<error_message_de>Pseudo card PAN not found</error_message_de>
+    </entry>
+    <entry>
+		<error_code>876</error_code>
+		<error_message_en>AVS mismatch: The address provided does not match billing address of card holder.</error_message_en>
+		<error_message_de>AVS mismatch: The address provided does not match billing address of card holder.</error_message_de>
+    </entry>
+    <entry>
+		<error_code>877</error_code>
+		<error_message_en>Invalid card number (Luhn check for this PAN incorrect)</error_message_en>
+		<error_message_de>Invalid card number (Luhn check for this PAN incorrect)</error_message_de>
+    </entry>
+    <entry>
+		<error_code>878</error_code>
+		<error_message_en>Invalid card number (syntax check for this PAN incorrect)</error_message_en>
+		<error_message_de>Invalid card number (syntax check for this PAN incorrect)</error_message_de>
+	    </entry>
+    <entry>
+		<error_code>879</error_code>
+		<error_message_en>CVC2 code incorrect length or incorrect syntax</error_message_en>	
+        <error_message_de>CVC2 code incorrect length or incorrect syntax</error_message_de>	
+		</entry>
+    <entry>
+		<error_code>880</error_code>
+		<error_message_en>Card type does not correspond with card number</error_message_en>	
+        <error_message_de>Card type does not correspond with card number</error_message_de>	
+		</entry>
+    <entry>
+		<error_code>881</error_code>
+		<error_message_en>Bank details cannot be used for online banking.</error_message_en>
+		<error_message_de>Bank details cannot be used for online banking.</error_message_de>
+	    </entry>
+    <entry>
+		<error_code>882</error_code>
+		<error_message_en>Bank type not supported</error_message_en>
+		<error_message_de>Bank type not supported</error_message_de>
+	    </entry>
+    <entry>
+		<error_code>883</error_code>
+		<error_message_en>The account number is invalid for this sort code</error_message_en>
+		<error_message_de>The account number is invalid for this sort code</error_message_de>
+	    </entry>
+    <entry>
+		<error_code>884</error_code>
+		<error_message_en>The sort code is invalid</error_message_en>
+		<error_message_de>The sort code is invalid</error_message_de>
+	    </entry>
+    <entry>
+		<error_code>885</error_code>
+		<error_message_en>Bank is not supported by giropay</error_message_en>
+		<error_message_de>Bank is not supported by giropay</error_message_de>
+	</entry>
+    <entry>
+		<error_code>886</error_code>
+		<error_message_en>Online transfer type not supported</error_message_en>	
+		<error_message_de>Online transfer type not supported</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>887</error_code>
+		<error_message_en>Invalid BIC</error_message_en>
+		<error_message_de>Invalid BIC</error_message_de>
+	</entry>
+    <entry>
+		<error_code>888</error_code>
+		<error_message_en>Invalid IBAN</error_message_en>	
+		<error_message_de>Invalid IBAN</error_message_de>
+	</entry>
+    <entry>
+		<error_code>889</error_code>
+		<error_message_en>Country of the BIC not supported.</error_message_en>
+		<error_message_de>Country of the BIC not supported.</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>890</error_code>
+		<error_message_en>Payment declined due to current risk setting</error_message_en>	
+		<error_message_de>Payment declined due to current risk setting</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>891</error_code>
+		<error_message_en>Debtor limit exceeded, payment refused</error_message_en>	 
+		<error_message_de>Debtor limit exceeded, payment refused</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>892</error_code>
+		<error_message_en>Country of the account not supported.</error_message_en>	
+		<error_message_de>Country of the account not supported.</error_message_de>
+	</entry>
+    <entry>
+		<error_code>894</error_code>
+		<error_message_en>account data incomplete: account holder name missing or invalid</error_message_en>
+		<error_message_de>account data incomplete: account holder name missing or invalid</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>895</error_code>
+		<error_message_en>account data incomplete: street missing or invalid</error_message_en>	
+		<error_message_de>account data incomplete: street missing or invalid</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>896</error_code>
+		<error_message_en>account data incomplete: zip missing or invalid</error_message_en>
+		<error_message_de>account data incomplete: zip missing or invalid</error_message_de>
+	</entry>
+    <entry>
+		<error_code>897</error_code>
+		<error_message_en>account data incomplete: city missing or invalid</error_message_en>
+		<error_message_de>account data incomplete: city missing or invalid</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>900</error_code>
+		<error_message_en>Internal error</error_message_en>	
+		<error_message_de>Internal error</error_message_de>	 
+	</entry>
+    <entry>
+		<error_code>901</error_code>
+		<error_message_en>Configuration error</error_message_en>
+		<error_message_de>Configuration error</error_message_de>
+	</entry>
+    <entry>
+		<error_code>902</error_code>
+		<error_message_en>Unknown error with external service provider.</error_message_en>	 
+		<error_message_de>Unknown error with external service provider.</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>903</error_code>
+		<error_message_en>No connection to external service provider possible (timeout, breakdown)</error_message_en>
+		<error_message_de>No connection to external service provider possible (timeout, breakdown)</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>904</error_code>
+		<error_message_en>Temporary error</error_message_en>
+		<error_message_de>Temporary error</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>905</error_code>
+		<error_message_en>Merchant authentication / authorization at service provider failed</error_message_en>	
+		<error_message_de>Merchant authentication / authorization at service provider failed</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>906</error_code>
+		<error_message_en>Refund amount too high</error_message_en>	
+		<error_message_de>Refund amount too high</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>907</error_code>
+		<error_message_en>Sequence no incorrect</error_message_en>	
+		<error_message_de>Sequence no incorrect</error_message_de>
+	</entry>
+    <entry>	  
+		<error_code>908</error_code>
+		<error_message_en>Capture amount too high</error_message_en>
+		<error_message_de>Capture amount too high</error_message_de>
+	</entry>
+    <entry>	  
+		<error_code>909</error_code>
+		<error_message_en>Database connection failed</error_message_en>	 
+		<error_message_de>Database connection failed</error_message_de>
+	</entry>
+    <entry>	  
+		<error_code>910</error_code>
+		<error_message_en>Currency does not correspond with the referenced payment process</error_message_en>
+		<error_message_de>Currency does not correspond with the referenced payment process</error_message_de>
+	</entry>
+    <entry>	  
+		<error_code>911</error_code>
+		<error_message_en>Reference number already exists</error_message_en>
+		<error_message_de>Reference number already exists</error_message_de>	
+    </entry>
+    <entry>	  
+		<error_code>912</error_code>
+		<error_message_en>Reference number does not correspond with the referenced payment process</error_message_en>
+		<error_message_de>Reference number does not correspond with the referenced payment process</error_message_de>	
+    </entry>
+    <entry>	  
+		<error_code>913</error_code>
+		<error_message_en>Referenced payment process (txid) not found</error_message_en>
+		<error_message_de>Referenced payment process (txid) not found</error_message_de>
+	</entry>
+    <entry>	  
+		<error_code>915</error_code>
+		<error_message_en>Refund not possible</error_message_en>
+		<error_message_de>Refund not possible</error_message_de>
+	</entry>
+    <entry>	   
+		<error_code>916</error_code>
+		<error_message_en>Amount error</error_message_en>
+		<error_message_de>Amount error</error_message_de>
+	</entry>
+    <entry>	   
+		<error_code>917</error_code>
+		<error_message_en>Refund limit exceeded</error_message_en>	
+		<error_message_de>Refund limit exceeded</error_message_de>	
+    </entry>
+    <entry>	  
+		<error_code>918</error_code>
+		<error_message_en>Upper or lower limit amount exceeded</error_message_en>	
+		<error_message_de>Upper or lower limit amount exceeded</error_message_de>
+	</entry>
+    <entry>	   
+		<error_code>919</error_code>
+		<error_message_en>Limit revenue exceeded</error_message_en>	 
+		<error_message_de>Limit revenue exceeded</error_message_de>	
+    </entry>
+    <entry>	   
+		<error_code>920</error_code>	
+		<error_message_en>MaxPayoutAmount exceeded</error_message_en>
+		<error_message_de>MaxPayoutAmount exceeded</error_message_de>
+	</entry>
+    <entry>	   
+		<error_code>921</error_code>	
+		<error_message_en>Account balance insufficient</error_message_en>	
+		<error_message_de>Account balance insufficient</error_message_de>
+	</entry>
+    <entry>	  
+		<error_code>922</error_code>
+		<error_message_en>Unknown account</error_message_en>
+		<error_message_de>Unknown account</error_message_de>
+	</entry>
+    <entry>	  
+		<error_code>923</error_code>	
+		<error_message_en>Payment type not available for this currency or card type</error_message_en>
+		<error_message_de>Payment type not available for this currency or card type</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>924</error_code>
+		<error_message_en>Test mode not available</error_message_en>
+		<error_message_de>Test mode not available</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>925</error_code>	
+		<error_message_en>Live mode not available</error_message_en>
+		<error_message_de>Live mode not available</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>926</error_code>	
+		<error_message_en>Incorrect mode for the referenced payment process</error_message_en>	
+		<error_message_de>Incorrect mode for the referenced payment process</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>927</error_code>
+		<error_message_en>No refund connector.</error_message_en>	
+		<error_message_de>No refund connector.</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>928</error_code>	
+		<error_message_en>Article with itemtype prepaid not allowed in this request</error_message_en>	
+		<error_message_de>Article with itemtype prepaid not allowed in this request</error_message_de>
+	</entry>
+    <entry>	  
+		<error_code>929</error_code>
+		<error_message_en>If the request contains articles with itemtype prepaid, the amount must be 0</error_message_en>
+		<error_message_de>If the request contains articles with itemtype prepaid, the amount must be 0</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>930</error_code>
+		<error_message_en>Connection does not support value of {recurrence}</error_message_en>	
+		<error_message_de>Connection does not support value of {recurrence}</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>931</error_code>	
+		<error_message_en>Request does not support type of payment</error_message_en>
+		<error_message_de>Request does not support type of payment</error_message_de>	
+    </entry>
+    <entry>	  
+		<error_code>932</error_code>	
+		<error_message_en>Encashment not possible for this type of payment</error_message_en>	
+		<error_message_de>Encashment not possible for this type of payment</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>933</error_code>	
+		<error_message_en>Multiple partial capture not supported for this method of payment</error_message_en>	 
+		<error_message_de>Multiple partial capture not supported for this method of payment</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>934</error_code>	
+		<error_message_en>Multiple partial capture not enabled</error_message_en>	
+		<error_message_de>Multiple partial capture not enabled</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>935</error_code>	
+		<error_message_en>Amount for multiple partial capture cannot be 0</error_message_en>	
+		<error_message_de>Amount for multiple partial capture cannot be 0</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>936</error_code>	
+		<error_message_en>Authorisation without incoming payment not possible for this type of payment</error_message_en>	
+		<error_message_de>Authorisation without incoming payment not possible for this type of payment</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>937</error_code>
+		<error_message_en>settleaccount does not fit to capturemode</error_message_en>
+		<error_message_de>settleaccount does not fit to capturemode</error_message_de>
+	</entry>
+    <entry>	  
+		<error_code>938</error_code>	
+		<error_message_en>Voucher is not supported by this payment type</error_message_en>	
+		<error_message_de>Voucher is not supported by this payment type</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>939</error_code>	
+		<error_message_en>The amount of a prepaid article must be negative.</error_message_en>	
+		<error_message_de>The amount of a prepaid article must be negative.</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>940</error_code>	
+		<error_message_en>Currency or cardtype not available at external service provider.</error_message_en>
+		<error_message_de>Currency or cardtype not available at external service provider.</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>941</error_code>	 
+		<error_message_en>Feature referenced Transaction is not enabled at service provider.</error_message_en>	 
+		<error_message_de>Feature referenced Transaction is not enabled at service provider.</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>944</error_code>	
+		<error_message_en>Amount too small</error_message_en>
+		<error_message_de>Amount too small</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>945</error_code>	
+		<error_message_en>Amount too high</error_message_en>
+		<error_message_de>Amount too high</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>950</error_code>	
+		<error_message_en>Desired status change not possible for this payment process</error_message_en>
+		<error_message_de>Desired status change not possible for this payment process</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>951</error_code>	
+		<error_message_en>The maximum number of actions for this txid has been reached</error_message_en>
+		<error_message_de>The maximum number of actions for this txid has been reached</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>952</error_code>
+		<error_message_en>The Transaction was already completed.</error_message_en>	 
+		<error_message_de>The Transaction was already completed.</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>960</error_code>
+		<error_message_en>Target payment process (txid) not found</error_message_en>
+		<error_message_de>Target payment process (txid) not found</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>961</error_code>
+		<error_message_en>No incoming transfer found for this payment process</error_message_en>
+		<error_message_de>No incoming transfer found for this payment process</error_message_de>
+	</entry>
+    <entry>
+		<error_code>962</error_code>	
+		<error_message_en>Transferable amount not available</error_message_en>	
+		<error_message_de>Transferable amount not available</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>970</error_code>	
+		<error_message_en>Operation was cancelled by the user.</error_message_en>
+		<error_message_de>Operation was cancelled by the user.</error_message_de>
+	</entry>
+    <entry>
+		<error_code>971</error_code>	
+		<error_message_en>The user has not finished his action in given time.</error_message_en>
+		<error_message_de>The user has not finished his action in given time.</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>972</error_code>	
+		<error_message_en>Transaction has expired</error_message_en>
+		<error_message_de>Transaction has expired</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>973</error_code>	
+		<error_message_en>Minimum age not reached</error_message_en>
+		<error_message_de>Minimum age not reached</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>990</error_code>	 
+		<error_message_en>Maintenance work</error_message_en>
+		<error_message_de>Maintenance work</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>991</error_code>	 
+		<error_message_en>Maintenance work at external service provider.</error_message_en>	
+		<error_message_de>Maintenance work at external service provider.</error_message_de>	 
+	</entry>
+    <entry>	
+		<error_code>1000</error_code>	
+		<error_message_en>Parameter faulty or missing</error_message_en>
+		<error_message_de>Parameter faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1001</error_code>	 
+		<error_message_en>Parameter {clearingtype} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {clearingtype} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1002</error_code>	
+		<error_message_en>Parameter {param} faulty</error_message_en>
+		<error_message_de>Parameter {param} faulty</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1003</error_code>	
+		<error_message_en>Parameter {reference} faulty or missing</error_message_en>
+		<error_message_de>Parameter {reference} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1004</error_code>	
+		<error_message_en>Parameter {processing_time} faulty</error_message_en>	
+		<error_message_de>Parameter {processing_time} faulty</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>1005</error_code>
+		<error_message_en>Parameter {currency} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {currency} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1006</error_code>
+		<error_message_en>Parameter {due_time} faulty</error_message_en>
+		<error_message_de>Parameter {due_time} faulty</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1007</error_code>	
+		<error_message_en>Parameter {add_paydata} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {add_paydata} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1008</error_code>	
+		<error_message_en>Parameter {txid} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {txid} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1009</error_code>
+		<error_message_en>Parameter {sequencenumber} faulty or missing</error_message_en>
+		<error_message_de>Parameter {sequencenumber} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1010</error_code>
+		<error_message_en>Parameter {mode} faulty or missing</error_message_en>	 
+		<error_message_de>Parameter {mode} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1011</error_code>	
+		<error_message_en>Parameter {workorderid} incorrect or missing</error_message_en>
+		<error_message_de>Parameter {workorderid} incorrect or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1012</error_code>	
+		<error_message_en>Parameter {api_version} incorrect or missing</error_message_en>	
+		<error_message_de>Parameter {api_version} incorrect or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1016</error_code>	
+		<error_message_en>Parameter {amount} faulty or missing</error_message_en>
+		<error_message_de>Parameter {amount} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1018</error_code>	
+		<error_message_en>Parameter {max_payout_amount} faulty</error_message_en>
+		<error_message_de>Parameter {max_payout_amount} faulty</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1024</error_code>	
+		<error_message_en>Parameter {booking_date} faulty</error_message_en>
+		<error_message_de>Parameter {booking_date} faulty</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1025</error_code>	
+		<error_message_en>Parameter {document_date} faulty</error_message_en>
+		<error_message_de>Parameter {document_date} faulty</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1031</error_code>	
+		<error_message_en>Parameter {settleaccount} faulty</error_message_en>	
+		<error_message_de>Parameter {settleaccount} faulty</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1032</error_code>	
+		<error_message_en>Parameter {capturemode} faulty</error_message_en>	
+		<error_message_de>Parameter {capturemode} faulty</error_message_de>	 
+	</entry>
+    <entry>	
+		<error_code>1035</error_code>	
+		<error_message_en>Parameter {transactiontype} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {transactiontype} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1036</error_code>	
+		<error_message_en>Parameter {customer_is_present} faulty or missing</error_message_en>
+		<error_message_de>Parameter {customer_is_present} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1037</error_code>	
+		<error_message_en>Parameter {recurrence} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {recurrence} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1041</error_code>	
+		<error_message_en>Parameter {successurl} faulty or missing</error_message_en>
+		<error_message_de>Parameter {successurl} faulty or missing</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>1042</error_code>
+		<error_message_en>Parameter {backurl} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {backurl} faulty or missing</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>1043</error_code>	
+		<error_message_en>Parameter {errorurl} faulty or missing</error_message_en>	 
+		<error_message_de>Parameter {errorurl} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1055</error_code>
+		<error_message_en>Parameter {financingtype} faulty or missing</error_message_en>
+		<error_message_de>Parameter {financingtype} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1065</error_code>
+		<error_message_en>Parameter {onlinebanktransfertype} faulty or missing</error_message_en>
+		<error_message_de>Parameter {onlinebanktransfertype} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1071</error_code>	
+		<error_message_en>Parameter {xid} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {xid} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1072</error_code>	
+		<error_message_en>Parameter {storecarddata} faulty or missing</error_message_en>
+		<error_message_de>Parameter {storecarddata} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1073</error_code>
+		<error_message_en>Parameter {pseudocardpan} faulty or missing</error_message_en>
+		<error_message_de>Parameter {pseudocardpan} faulty or missing</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1075</error_code>
+		<error_message_en>Parameter {cardissuenumber} faulty or missing</error_message_en>
+		<error_message_de>Parameter {cardissuenumber} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1076</error_code>
+		<error_message_en>Parameter {cardtype} faulty or missing</error_message_en>
+		<error_message_de>Parameter {cardtype} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1077</error_code>	
+		<error_message_en>Parameter {cardexpiredate} faulty or missing</error_message_en>
+		<error_message_de>Parameter {cardexpiredate} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1078</error_code>
+		<error_message_en>Parameter {cardpan} faulty or missing</error_message_en>
+		<error_message_de>Parameter {cardpan} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1079</error_code>
+		<error_message_en>Parameter {cardcvc2} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {cardcvc2} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1080</error_code>
+		<error_message_en>Parameter {bankaccountholder} faulty or missing</error_message_en>
+		<error_message_de>Parameter {bankaccountholder} faulty or missing</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1081</error_code>
+		<error_message_en>Parameter {bankbranchcode} faulty or missing</error_message_en>
+		<error_message_de>Parameter {bankbranchcode} faulty or missing</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1082</error_code>	
+		<error_message_en>Parameter {bankcountry} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {bankcountry} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1083</error_code>
+		<error_message_en>Parameter {bankaccount} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {bankaccount} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1084</error_code>
+		<error_message_en>Parameter {bankcode} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {bankcode} faulty or missing</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1085</error_code>
+		<error_message_en>Parameter {bankgrouptype} faulty or missing</error_message_en>
+		<error_message_de>Parameter {bankgrouptype} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1086</error_code>
+		<error_message_en>Parameter {bankcheckdigit} faulty or missing</error_message_en>
+		<error_message_de>Parameter {bankcheckdigit} faulty or missing</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1087</error_code>	
+		<error_message_en>Parameter {BIC} faulty or missing</error_message_en>
+		<error_message_de>Parameter {BIC} faulty or missing</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>1088</error_code>
+		<error_message_en>Parameter {IBAN} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {IBAN} faulty or missing</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>1089</error_code>
+		<error_message_en>Parameter {elvtype} faulty or missing.</error_message_en>	
+		<error_message_de>Parameter {elvtype} faulty or missing.</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1090</error_code>
+		<error_message_en>Parameter {shippingprovider} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {shippingprovider} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1091</error_code>
+		<error_message_en>Incomplete or missing bank-data. Define {bankaccount} or {iban}.</error_message_en>
+		<error_message_de>Incomplete or missing bank-data. Define {bankaccount} or {iban}.</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1095</error_code>	
+		<error_message_en>Parameter {wallettype} faulty or missing</error_message_en>
+		<error_message_de>Parameter {wallettype} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1096</error_code>
+		<error_message_en>Parameter {cashtype} incorrect or missing</error_message_en>	
+		<error_message_de>Parameter {cashtype} incorrect or missing</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>1100</error_code>
+		<error_message_en>Parameter {mandate_identification} faulty or missing</error_message_en>
+		<error_message_de>Parameter {mandate_identification} faulty or missing</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>1101</error_code>
+		<error_message_en>Parameter {mandate_status} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {mandate_status} faulty or missing</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>1102</error_code>
+		<error_message_en>Parameter {mandate_dateofsignature} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {mandate_dateofsignature} faulty or missing</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1103</error_code>
+		<error_message_en>Parameter {mandate_sequencetype} faulty or missing</error_message_en>	 
+		<error_message_de>Parameter {mandate_sequencetype} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1104</error_code>	
+		<error_message_en>Parameter {mandate_language} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {mandate_language} faulty or missing</error_message_de>	 
+	</entry>
+    <entry>
+		<error_code>1110</error_code>
+		<error_message_en>Parameter {bankaccountholder_firstname} faulty or missing</error_message_en>
+		<error_message_de>Parameter {bankaccountholder_firstname} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1111</error_code>
+		<error_message_en>Parameter {bankaccountholder_lastname} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {bankaccountholder_lastname} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1112</error_code>
+		<error_message_en>Parameter {bankaccountholder_street} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {bankaccountholder_street} faulty or missing</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>1113</error_code>
+		<error_message_en>Parameter {bankaccountholder_zip} faulty or missing</error_message_en>
+		<error_message_de>Parameter {bankaccountholder_zip} faulty or missing</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1114</error_code>
+		<error_message_en>Parameter {bankaccountholder_city} faulty or missing</error_message_en>
+		<error_message_de>Parameter {bankaccountholder_city} faulty or missing</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>1115</error_code>
+		<error_message_en>Parameter {bankaccountholder_country} faulty or missing</error_message_en>
+		<error_message_de>Parameter {bankaccountholder_country} faulty or missing</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>1116</error_code>
+		<error_message_en>Parameter {bankaccountholder_email} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {bankaccountholder_email} faulty or missing</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1117</error_code>
+		<error_message_en>Parameter {bankaccountholder_company} faulty or missing</error_message_en>
+		<error_message_de>Parameter {bankaccountholder_company} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1201</error_code>
+		<error_message_en>Parameter {encoding} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {encoding} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1202</error_code>
+		<error_message_en>Parameter {request} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {request} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1203</error_code>	
+		<error_message_en>Parameter {mid} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {mid} faulty or missing</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1204</error_code>
+		<error_message_en>Parameter {aid} faulty or missing</error_message_en>
+		<error_message_de>Parameter {aid} faulty or missing</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1205</error_code>
+		<error_message_en>Parameter {portalid} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {portalid} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1206</error_code>
+		<error_message_en>Parameter {key} faulty</error_message_en>
+		<error_message_de>Parameter {key} faulty</error_message_de>	 
+	</entry>
+    <entry>	
+		<error_code>1208</error_code>
+		<error_message_en>Parameter {responsetype} faulty</error_message_en>
+		<error_message_de>Parameter {responsetype} faulty</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1300</error_code>
+		<error_message_en>Parameter {customerid} faulty</error_message_en>	
+		<error_message_de>Parameter {customerid} faulty</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1301</error_code>
+		<error_message_en>Parameter {firstname} faulty or missing</error_message_en>
+		<error_message_de>Parameter {firstname} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1302</error_code>
+		<error_message_en>Parameter {lastname} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {lastname} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1303</error_code>
+		<error_message_en>Parameter {company} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {company} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1310</error_code>
+		<error_message_en>Parameter {userid} faulty</error_message_en>
+		<error_message_de>Parameter {userid} faulty</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1311</error_code>
+		<error_message_en>Parameter {street} faulty or missing</error_message_en>
+		<error_message_de>Parameter {street} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1312</error_code>
+		<error_message_en>Parameter {streetnumber} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {streetnumber} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1313</error_code>
+		<error_message_en>Parameter {streetname} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {streetname} faulty or missing</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1314</error_code>	
+		<error_message_en>Parameter {addressaddition} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {addressaddition} faulty or missing</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>1321</error_code>
+		<error_message_en>Parameter {zip} faulty or missing</error_message_en>
+		<error_message_de>Parameter {zip} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1331</error_code>	
+		<error_message_en>Parameter {city} faulty or missing</error_message_en>
+		<error_message_de>Parameter {city} faulty or missing</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>1337</error_code>
+		<error_message_en>Billing address faulty or missing</error_message_en>	
+		<error_message_de>Billing address faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1338</error_code>	
+		<error_message_en>Parameter combination {city} and {state} faulty or missing</error_message_en>	
+		<error_message_de>Parameter combination {city} and {state} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1339</error_code>
+		<error_message_en>Parameter {state} faulty or missing</error_message_en>
+		<error_message_de>Parameter {state} faulty or missing</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1340</error_code>
+		<error_message_en>Parameter {country} faulty or missing</error_message_en>
+		<error_message_de>Parameter {country} faulty or missing</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1341</error_code>
+		<error_message_en>Parameter {language} faulty or missing</error_message_en>
+		<error_message_de>Parameter {language} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1343</error_code>
+		<error_message_en>Parameter {birthday} faulty or missing</error_message_en>	 
+		<error_message_de>Parameter {birthday} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1344</error_code>
+		<error_message_en>Parameter {telephonenumber} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {telephonenumber} faulty or missing</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1345</error_code>
+		<error_message_en>Parameter {personalid} faulty or missing</error_message_en>
+		<error_message_de>Parameter {personalid} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1346</error_code>
+		<error_message_en>Parameter {gender} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {gender} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1350</error_code>
+		<error_message_en>Parameter {email} faulty or missing</error_message_en>
+		<error_message_de>Parameter {email} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1367</error_code>
+		<error_message_en>Parameter {shipping_street} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {shipping_street} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1368</error_code>
+		<error_message_en>Parameter {shipping_company} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {shipping_company} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1369</error_code>
+		<error_message_en>Parameter {shipping_state} faulty or missing</error_message_en>
+		<error_message_de>Parameter {shipping_state} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1370</error_code>
+		<error_message_en>Parameter {shipping_country} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {shipping_country} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1371</error_code>
+		<error_message_en>Parameter {shipping_addressaddition} faulty or missing</error_message_en>
+		<error_message_de>Parameter {shipping_addressaddition} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1372</error_code>
+		<error_message_en>Parameter {shipping_zip} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {shipping_zip} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1373</error_code>
+		<error_message_en>Parameter {shipping_city} faulty or missing</error_message_en>
+		<error_message_de>Parameter {shipping_city} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1374</error_code>
+		<error_message_en>Parameter combination {shipping_city} and {shipping_state} faulty or missing</error_message_en>
+		<error_message_de>Parameter combination {shipping_city} and {shipping_state} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1375</error_code>
+		<error_message_en>Shipping address faulty or missing</error_message_en>	
+		<error_message_de>Shipping address faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1380</error_code>
+		<error_message_en>Parameter {ip} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {ip} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1381</error_code>
+		<error_message_en>Parameter {use_customerdata} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {use_customerdata} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1390</error_code>
+		<error_message_en>Parameter {delete_carddata} faulty or missing</error_message_en>
+		<error_message_de>Parameter {delete_carddata} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1391</error_code>
+		<error_message_en>Parameter {delete_bankaccountdata} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {delete_bankaccountdata} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1421</error_code>
+		<error_message_en>Parameter {exiturl} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {exiturl} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1432</error_code>
+		<error_message_en>Parameter {checktype} faulty or missing</error_message_en>
+		<error_message_de>Parameter {checktype} faulty or missing</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1433</error_code>
+		<error_message_en>Parameter {scoretype} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {scoretype} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1434</error_code>
+		<error_message_en>Parameter {consumerscoretype} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {consumerscoretype} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1435</error_code>
+		<error_message_en>Parameter {addresschecktype} faulty or missing</error_message_en>	 
+		<error_message_de>Parameter {addresschecktype} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1471</error_code>	
+		<error_message_en>Parameter {phone_prefix} / {telephonenumber} incorrect or missing</error_message_en>	
+		<error_message_de>Parameter {phone_prefix} / {telephonenumber} incorrect or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1472</error_code>
+		<error_message_en>Parameter {phone_number} / {telephonenumber} incorrect or missing</error_message_en>
+		<error_message_de>Parameter {phone_number} / {telephonenumber} incorrect or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1473</error_code>
+		<error_message_en>Parameter {pin} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {pin} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1501</error_code>
+		<error_message_en>Parameter {reminderlevel} faulty or missing</error_message_en>
+		<error_message_de>Parameter {reminderlevel} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1502</error_code>
+		<error_message_en>Parameter {remindertime} faulty or missing</error_message_en>	 
+		<error_message_de>Parameter {remindertime} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1503</error_code>
+		<error_message_en>Parameter {sendreminder} faulty or missing</error_message_en>
+		<error_message_de>Parameter {sendreminder} faulty or missing</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1504</error_code>
+		<error_message_en>Parameter {failedcause} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {failedcause} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1610</error_code>
+		<error_message_en>Article list faulty or incomplete</error_message_en>	
+		<error_message_de>Article list faulty or incomplete</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1611</error_code>
+		<error_message_en>Parameter {id[n]} faulty or missing</error_message_en>
+		<error_message_de>Parameter {id[n]} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1612</error_code>
+		<error_message_en>Parameter {pr[n]} faulty or missing</error_message_en>
+		<error_message_de>Parameter {pr[n]} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1613</error_code>
+		<error_message_en>Parameter {no[n]} faulty or missing</error_message_en>
+		<error_message_de>Parameter {no[n]} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1614</error_code>
+		<error_message_en>Parameter {va[n]} faulty or missing</error_message_en>
+		<error_message_de>Parameter {va[n]} faulty or missing</error_message_de>
+	</entry>
+    <entry>
+		<error_code>1615</error_code>
+		<error_message_en>Parameter {sd[]} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {sd[]} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1616</error_code>
+		<error_message_en>Parameter {ed[]} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {ed[]} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1617</error_code>
+		<error_message_en>Parameter {it[]} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {it[]} faulty or missing</error_message_de>	 
+	</entry>
+    <entry>	 
+		<error_code>1618</error_code>
+		<error_message_en>Gross-amount of an item trespass the maximum</error_message_en>
+		<error_message_de>Gross-amount of an item trespass the maximum</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1631</error_code>
+		<error_message_en>Parameter {invoice_title} faulty or missing</error_message_en>
+		<error_message_de>Parameter {invoice_title} faulty or missing</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1632</error_code>
+		<error_message_en>Parameter {invoice_deliverymode} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {invoice_deliverymode} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1633</error_code>
+		<error_message_en>Parameter {invoice_deliverydate} faulty or missing</error_message_en>
+		<error_message_de>Parameter {invoice_deliverydate} faulty or missing</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1634</error_code>
+		<error_message_en>Parameter {invoice_deliveryenddate} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {invoice_deliveryenddate} faulty or missing</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1650</error_code>
+		<error_message_en>Parameter {file_reference} faulty or missing</error_message_en>
+		<error_message_de>Parameter {file_reference} faulty or missing</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1651</error_code>
+		<error_message_en>Parameter {file_type} faulty or missing</error_message_en>
+		<error_message_de>Parameter {file_type} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1652</error_code>
+		<error_message_en>Parameter {file_format} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {file_format} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1700</error_code>
+		<error_message_en>Parameter {action} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {action} faulty or missing</error_message_de>	    </entry>
+    <entry>	
+	
+		<error_code>1705</error_code>
+		<error_message_en>Parameter {accessid} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {accessid} faulty or missing</error_message_de>	 
+	</entry>
+    <entry>	
+		<error_code>1706</error_code>
+		<error_message_en>Parameter {access_price} faulty or missing</error_message_en>	  
+		<error_message_de>Parameter {access_price} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1707</error_code>
+		<error_message_en>Parameter {access_aboprice} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {access_aboprice} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1708</error_code>
+		<error_message_en>Parameter {access_expiretime} faulty or missing</error_message_en>
+		<error_message_de>Parameter {access_expiretime} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1709</error_code>
+		<error_message_en>Parameter {access_period} faulty</error_message_en>	
+		<error_message_de>Parameter {access_period} faulty</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1710</error_code>
+		<error_message_en>Parameter {access_aboperiod} faulty</error_message_en>
+		<error_message_de>Parameter {access_aboperiod} faulty</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1711</error_code>
+		<error_message_en>Parameter {access_starttime} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {access_starttime} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1712</error_code>
+		<error_message_en>Parameter {access_canceltime} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {access_canceltime} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1713</error_code>
+		<error_message_en>Parameter {access_vat} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {access_vat} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1721</error_code>
+		<error_message_en>Parameter {productid} faulty or missing</error_message_en>
+		<error_message_de>Parameter {productid} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1723</error_code>
+		<error_message_en>Parameter {id_trail} (item number) faulty or missing</error_message_en>
+		<error_message_de>Parameter {id_trail} (item number) faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1724</error_code>
+		<error_message_en>Parameter {no_trail} (quantity) faulty or missing</error_message_en>	
+		<error_message_de>Parameter {no_trail} (quantity) faulty or missing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1725</error_code>
+		<error_message_en>Parameter {pr_trail} (price) faulty or missing</error_message_en>	
+		<error_message_de>Parameter {pr_trail} (price) faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1726</error_code>	
+		<error_message_en>Parameter {de_trail} (description) faulty or missing</error_message_en>
+		<error_message_de>Parameter {de_trail} (description) faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1727</error_code>
+		<error_message_en>Parameter {va_trail} (VAT rate) faulty or missing</error_message_en>
+		<error_message_de>Parameter {va_trail} (VAT rate) faulty or missing</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1728</error_code>
+		<error_message_en>Parameter {period_unit_trail} faulty or missing</error_message_en>
+		<error_message_de>Parameter {period_unit_trail} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1729</error_code>	
+		<error_message_en>Parameter {period_length_trail} faulty or missing</error_message_en>
+		<error_message_de>Parameter {period_length_trail} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1730</error_code>
+		<error_message_en>Parameter {id_recurring} (item number) faulty or missing</error_message_en>
+		<error_message_de>Parameter {id_recurring} (item number) faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1731</error_code>
+		<error_message_en>Parameter {no_recurring} (quantity) faulty or missing</error_message_en>	
+		<error_message_de>Parameter {no_recurring} (quantity) faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1732</error_code>	
+		<error_message_en>Parameter {pr_recurring} (price) faulty or missing</error_message_en>	   
+		<error_message_de>Parameter {pr_recurring} (price) faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1733</error_code>
+		<error_message_en>Parameter {de_recurring} (description) faulty or missing</error_message_en>	
+		<error_message_de>Parameter {de_recurring} (description) faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1734</error_code>
+		<error_message_en>Parameter {va_recurring} (VAT rate) faulty or missing</error_message_en>	 
+		<error_message_de>Parameter {va_recurring} (VAT rate) faulty or missing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1735</error_code>	
+		<error_message_en>Parameter {period_unit_recurring} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {period_unit_recurring} faulty or missing</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1736</error_code>
+		<error_message_en>Parameter {period_length_recurring} faulty or missing</error_message_en>	 
+		<error_message_de>Parameter {period_length_recurring} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1737</error_code>
+		<error_message_en>No item data found for initial term.</error_message_en>	
+		<error_message_de>No item data found for initial term.</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1738</error_code>	
+		<error_message_en>No item data found for subsequent term.</error_message_en>
+		<error_message_de>No item data found for subsequent term.</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1739</error_code>
+		<error_message_en>Parameter {amount_trail} faulty or missing</error_message_en>	 
+		<error_message_de>Parameter {amount_trail} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1740</error_code>
+		<error_message_en>Parameter {amount_recurring} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {amount_recurring} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1753</error_code>
+		<error_message_en>The indicated total price of all articles from the initial term did not correspond with the amounts of the individual items.</error_message_en>
+		<error_message_de>The indicated total price of all articles from the initial term did not correspond with the amounts of the individual items.</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1754</error_code>
+		<error_message_en>The indicated total price of all articles from the subsequent term did not correspond with the amounts of the individual items.</error_message_en>
+		<error_message_de>The indicated total price of all articles from the subsequent term did not correspond with the amounts of the individual items.</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1755</error_code>
+		<error_message_en>Incomplete item data for the initial term.</error_message_en>	
+		<error_message_de>Incomplete item data for the initial term.</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1756</error_code>	
+		<error_message_en>Incomplete item data for the subsequent term.</error_message_en>	
+		<error_message_de>Incomplete item data for the subsequent term.</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1757</error_code>
+		<error_message_en>Incomplete time definition for the initial term.</error_message_en>
+		<error_message_de>Incomplete time definition for the initial term.</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1758</error_code>
+		<error_message_en>Incomplete time definition for the subsequent term.</error_message_en>
+		<error_message_de>Incomplete time definition for the subsequent term.</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>1759</error_code>
+		<error_message_en>For more than one item position in the initial term the price cannot be transmitted without items.</error_message_en>	
+		<error_message_de>For more than one item position in the initial term the price cannot be transmitted without items.</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1760</error_code>	
+		<error_message_en>For more than one item position in the subsequent term the price cannot be transmitted without items.</error_message_en>
+		<error_message_de>For more than one item position in the subsequent term the price cannot be transmitted without items.</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1761</error_code>
+		<error_message_en>Parameter {ti_trail} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {ti_trail} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1762</error_code>
+		<error_message_en>Parameter {ti_recurring} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {ti_recurring} faulty or missing</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1810</error_code>
+		<error_message_en>Parameter {vaccountname} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {vaccountname} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1811</error_code>
+		<error_message_en>Parameter {vreference} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {vreference} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1813</error_code>
+		<error_message_en>Parameter {settleperiod} faulty or missing</error_message_en>	 
+		<error_message_de>Parameter {settleperiod} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1814</error_code>
+		<error_message_en>Parameter {settletime} faulty or missing</error_message_en>
+		<error_message_de>Parameter {settletime} faulty or missing</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>1815</error_code>
+		<error_message_en>Parameter {settle_period_unit} faulty or missing</error_message_en>
+		<error_message_de>Parameter {settle_period_unit} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1816</error_code>	
+		<error_message_en>Parameter {settle_period_length} faulty or missing</error_message_en>	
+		<error_message_de>Parameter {settle_period_length} faulty or missing</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>1817</error_code>
+		<error_message_en>Parameter {payout_open_balance} faulty or missing</error_message_en>
+		<error_message_de>Parameter {payout_open_balance} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>1999</error_code>
+		<error_message_en>Parameter {ecommercemode} faulty or missing</error_message_en>
+		<error_message_de>Parameter {ecommercemode} faulty or missing</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>2001</error_code>	
+		<error_message_en>Channel not enabled for this payment portal</error_message_en>
+		<error_message_de>Channel not enabled for this payment portal</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>2002</error_code>
+		<error_message_en>Request not supported by activated channel</error_message_en>	
+		<error_message_de>Request not supported by activated channel</error_message_de>	 
+	</entry>
+    <entry>	 
+		<error_code>2003</error_code>	
+		<error_message_en>MerchantID not found or no rights</error_message_en>	
+		<error_message_de>MerchantID not found or no rights</error_message_de>	 
+	</entry>
+    <entry>	
+		<error_code>2004</error_code>	
+		<error_message_en>SubAccountID not found or no rights</error_message_en>	
+		<error_message_de>SubAccountID not found or no rights</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>2005</error_code>
+		<error_message_en>PortalID not found or no rights</error_message_en>
+		<error_message_de>PortalID not found or no rights</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>2006</error_code>
+		<error_message_en>Key incorrect</error_message_en>	
+		<error_message_de>Key incorrect</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>2007</error_code>
+		<error_message_en>Hash incorrect</error_message_en>	 
+		<error_message_de>Hash incorrect</error_message_de>	 
+	</entry>
+    <entry>	
+		<error_code>2008</error_code>	
+		<error_message_en>Invalid request - invalid parameter</error_message_en>	
+		<error_message_de>Invalid request - invalid parameter</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>2011</error_code>
+		<error_message_en>Parameters from different API versions cannot be used simultaneously.</error_message_en>	
+		<error_message_de>Parameters from different API versions cannot be used simultaneously.</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>2012</error_code>
+		<error_message_en>Parameters conflict in request or do not match</error_message_en>	  
+		<error_message_de>Parameters conflict in request or do not match</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>2013</error_code>
+		<error_message_en>API-request contains invalid characters (e.g. control characters, non-matching encoding)</error_message_en>	
+		<error_message_de>API-request contains invalid characters (e.g. control characters, non-matching encoding)</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>3000</error_code>
+		<error_message_en>Function not available</error_message_en>	
+		<error_message_de>Function not available</error_message_de>	 
+	</entry>
+    <entry>	
+		<error_code>3001</error_code>
+		<error_message_en>Parameter getusertoken invalid. Valid values are yes/no</error_message_en>
+		<error_message_de>Parameter getusertoken invalid. Valid values are yes/no</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>3002</error_code>
+		<error_message_en>A user-id or a customer-id must be set.</error_message_en>
+		<error_message_de>A user-id or a customer-id must be set.</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>3003</error_code>
+		<error_message_en>Usertoken not found.</error_message_en>	
+		<error_message_de>Usertoken not found.</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>3004</error_code>
+		<error_message_en>The usertoken is not allowed within the current request.</error_message_en>	
+		<error_message_de>The usertoken is not allowed within the current request.</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>3005</error_code>
+		<error_message_en>Usertoken and Userid are not to be transmitted simultaniously.</error_message_en>	
+		<error_message_de>Usertoken and Userid are not to be transmitted simultaniously.</error_message_de>	 
+	</entry>
+    <entry>	 
+		<error_code>3006</error_code>
+		<error_message_en>The usertoken has a wrong format.</error_message_en>	
+		<error_message_de>The usertoken has a wrong format.</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>3007</error_code>
+		<error_message_en>The transmitted customerid is not allowed.</error_message_en>
+		<error_message_de>The transmitted customerid is not allowed.</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>3008</error_code>
+		<error_message_en>The desired customer is already present.</error_message_en>
+		<error_message_de>The desired customer is already present.</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>3009</error_code>
+		<error_message_en>The customer does not exist.</error_message_en>
+		<error_message_de>The customer does not exist.</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>3010</error_code>
+		<error_message_en>The modes do not match.</error_message_en>
+		<error_message_de>The modes do not match.</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>3200</error_code>
+		<error_message_en>Customer not found or insufficient privileges</error_message_en>
+		<error_message_de>Customer not found or insufficient privileges</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>3301</error_code>	
+		<error_message_en>Bank data cannot be deleted, order prevailing</error_message_en>	
+		<error_message_de>Bank data cannot be deleted, order prevailing</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>3302</error_code>
+		<error_message_en>Bank data cannot be deleted, VirtualAccount not balanced</error_message_en>
+		<error_message_de>Bank data cannot be deleted, VirtualAccount not balanced</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>3303</error_code>
+		<error_message_en>Card data cannot be deleted, order prevailing</error_message_en>
+		<error_message_de>Card data cannot be deleted, order prevailing</error_message_de>	 
+	</entry>
+    <entry>	
+		<error_code>3304</error_code>
+		<error_message_en>Card data cannot be deleted, VirtualAccount not balanced</error_message_en>
+		<error_message_de>Card data cannot be deleted, VirtualAccount not balanced</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>4001</error_code>
+		<error_message_en>Address check not enabled</error_message_en>	
+		<error_message_de>Address check not enabled</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>4002</error_code>
+		<error_message_en>Type of address check not enabled</error_message_en>	
+		<error_message_de>Type of address check not enabled</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>4010</error_code>
+		<error_message_en>Country not supported</error_message_en>	
+		<error_message_de>Country not supported</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>4011</error_code>
+		<error_message_en>Country not supported</error_message_en>
+		<error_message_de>Country not supported</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>4041</error_code>
+		<error_message_en>Address not found</error_message_en>	
+		<error_message_de>Address not found</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>4042</error_code>
+		<error_message_en>Address not unique</error_message_en>	
+		<error_message_de>Address not unique</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>4051</error_code>
+		<error_message_en>City not found</error_message_en>	 
+		<error_message_de>City not found</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>4052</error_code>
+		<error_message_en>City ambiguous</error_message_en>	
+		<error_message_de>City ambiguous</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>4053</error_code>
+		<error_message_en>Street not found</error_message_en>	
+		<error_message_de>Street not found</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>4054</error_code>
+		<error_message_en>Street ambiguous</error_message_en>
+		<error_message_de>Street ambiguous</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>4055</error_code>
+		<error_message_en>Wrong post office box number</error_message_en>
+		<error_message_de>Wrong post office box number</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>4056</error_code>
+		<error_message_en>Street number error</error_message_en>
+		<error_message_de>Street number error</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>4057</error_code>
+		<error_message_en>Overseas address</error_message_en>
+		<error_message_de>Overseas address</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>4058</error_code>	
+		<error_message_en>Street invalid</error_message_en>	
+		<error_message_de>Street invalid</error_message_de>	 
+	</entry>
+    <entry>	
+		<error_code>4101</error_code>
+		<error_message_en>Consumer score check not enabled</error_message_en>
+		<error_message_de>Consumer score check not enabled</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>4102</error_code>
+		<error_message_en>Scoretype incorrect</error_message_en>
+		<error_message_de>Scoretype incorrect</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>4110</error_code>
+		<error_message_en>Credit reform, company credit information - no hits</error_message_en>
+		<error_message_de>Credit reform, company credit information - no hits</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>4112</error_code>
+		<error_message_en>Credit reform, company credit information - too many hits</error_message_en>
+		<error_message_de>Credit reform, company credit information - too many hits</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>4200</error_code>	
+		<error_message_en>Merchant does not participate in the 3D Secure procedure</error_message_en>
+		<error_message_de>Merchant does not participate in the 3D Secure procedure</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>4201</error_code>
+		<error_message_en>Request is not supported by payment portal type</error_message_en>
+		<error_message_de>Request is not supported by payment portal type</error_message_de>
+	</entry>
+    <entry>	  
+		<error_code>4208</error_code>
+		<error_message_en>Card does not participate in 3D Secure</error_message_en>	
+		<error_message_de>Card does not participate in 3D Secure</error_message_de>
+	</entry>
+    <entry>	  
+		<error_code>4209</error_code>
+		<error_message_en>PaRes Check not necessary</error_message_en>	
+		<error_message_de>PaRes Check not necessary</error_message_de>
+	</entry>
+    <entry>	  
+		<error_code>4210</error_code>
+		<error_message_en>3D Secure error</error_message_en>
+		<error_message_de>3D Secure error</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>4211</error_code>
+		<error_message_en>PaRasCheck error (status=A).</error_message_en>
+		<error_message_de>PaRasCheck error (status=A).</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>4212</error_code>
+		<error_message_en>PaRasCheck error (status=U).</error_message_en>	
+		<error_message_de>PaRasCheck error (status=U).</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>4213</error_code>
+		<error_message_en>PaRasCheck error (authentication failed).</error_message_en>	
+		<error_message_de>PaRasCheck error (authentication failed).</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>4214</error_code>
+		<error_message_en>3D Secure transaction requires XID.</error_message_en>
+		<error_message_de>3D Secure transaction requires XID.</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>4215</error_code>
+		<error_message_en>Indicated ECI mode not supported by 3D Secure</error_message_en>
+		<error_message_de>Indicated ECI mode not supported by 3D Secure</error_message_de>
+	</entry>
+    <entry>	 
+		<error_code>4216</error_code>
+		<error_message_en>XID not found.</error_message_en>	
+		<error_message_de>XID not found.</error_message_de>	 
+	</entry>
+    <entry>	 
+		<error_code>4217</error_code>
+		<error_message_en>3D Secure authentication not completed yet</error_message_en>	 
+		<error_message_de>3D Secure authentication not completed yet</error_message_de>	 
+	</entry>
+    <entry>	 
+		<error_code>4218</error_code>
+		<error_message_en>3D Secure authentication failed</error_message_en>
+		<error_message_de>3D Secure authentication failed</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>4219</error_code>	
+		<error_message_en>Successful 3D Secure authentication required</error_message_en>	
+		<error_message_de>Successful 3D Secure authentication required</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>4302</error_code>	
+		<error_message_en>Check type incorrect</error_message_en>	
+		<error_message_de>Check type incorrect</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>5050</error_code>
+		<error_message_en>Dunning level cannot be set</error_message_en>
+		<error_message_de>Dunning level cannot be set</error_message_de>
+	</entry>
+    <entry>	
+		<error_code>5052</error_code>	
+		<error_message_en>Error on repeated sending of a reminder.</error_message_en>
+		<error_message_de>Error on repeated sending of a reminder.</error_message_de>	  
+	</entry>
+    <entry>	 
+		<error_code>5054</error_code>
+		<error_message_en>Dunning date could not be set</error_message_en>
+		<error_message_de>Dunning date could not be set</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>6032</error_code>
+		<error_message_en>Invoice not found</error_message_en>
+		<error_message_de>Invoice not found</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>6500</error_code>
+		<error_message_en>File not found</error_message_en>	
+		<error_message_de>File not found</error_message_de>	 
+	</entry>
+    <entry>	
+		<error_code>6501</error_code>
+		<error_message_en>File not unique</error_message_en>
+		<error_message_de>File not unique</error_message_de>	 
+	</entry>
+    <entry>	
+		<error_code>6502</error_code>	
+		<error_message_en>Service temporarily unavailable</error_message_en>
+		<error_message_de>Service temporarily unavailable</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>7005</error_code>
+		<error_message_en>Access ID not found or no rights</error_message_en>
+		<error_message_de>Access ID not found or no rights</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>7008</error_code>
+		<error_message_en>Contract expiry date in the past or before the start date</error_message_en>	
+		<error_message_de>Contract expiry date in the past or before the start date</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>7011</error_code>
+		<error_message_en>Contract start date in the past</error_message_en>
+		<error_message_de>Contract start date in the past</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>7012</error_code>
+		<error_message_en>Term of contract has already started</error_message_en>	
+		<error_message_de>Term of contract has already started</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>7021</error_code>
+		<error_message_en>ProductID not found or no rights</error_message_en>	
+		<error_message_de>ProductID not found or no rights</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>7030</error_code>
+		<error_message_en>Operation not allowed under current access status.</error_message_en>	 
+		<error_message_de>Operation not allowed under current access status.</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>7040</error_code>
+		<error_message_en>The total amount of the items in the initial term equals 0.</error_message_en>
+		<error_message_de>The total amount of the items in the initial term equals 0.</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>7041</error_code>
+		<error_message_en>The total amount of the items in the subsequent term equals 0.</error_message_en>	
+		<error_message_de>The total amount of the items in the subsequent term equals 0.</error_message_de>	
+    </entry>
+    <entry>	 
+		<error_code>7042</error_code>
+		<error_message_en>The property {InvoiceAppendix} does not have the correct data type.</error_message_en>
+		<error_message_de>The property {InvoiceAppendix} does not have the correct data type.</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>7043</error_code>
+		<error_message_en>The IP address does not have the correct data type.</error_message_en>
+		<error_message_de>The IP address does not have the correct data type.</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>8010</error_code>
+		<error_message_en>VirtualAccountName already used for another customer</error_message_en>
+		<error_message_de>VirtualAccountName already used for another customer</error_message_de>	
+    </entry>
+    <entry>	
+		<error_code>8011</error_code>
+		<error_message_en>Reference number (virtual account) already exists</error_message_en>	
+		<error_message_de>Reference number (virtual account) already exists</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>8020</error_code>
+		<error_message_en>Currency does not correspond with the virtual account</error_message_en>	
+		<error_message_de>Currency does not correspond with the virtual account</error_message_de>	
+    </entry>
+    <entry>
+		<error_code>8030</error_code>
+		<error_message_en>Portal ID does not correspond with the virtual account.</error_message_en>
+	    <error_message_de>Portal ID does not correspond with the virtual account.</error_message_de>
+	</entry>
+    <entry>
+		<error_code>8040</error_code>
+		<error_message_en>Mode does not correspond with the virtual account.</error_message_en>
+		<error_message_de>Mode does not correspond with the virtual account.</error_message_de>
+	</entry>
+
+	
+	
+</payone_errors>

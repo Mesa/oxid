@@ -1,0 +1,105 @@
+//
+// This file is part of OXID eSales mobile theme.
+//
+// OXID eSales mobile theme is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// OXID eSales mobile theme is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with OXID eSales mobile theme.  If not, see <http://www.gnu.org/licenses/>.
+//
+// @link      http://www.oxid-esales.com
+// @copyright (C) OXID eSales AG 2003-2013
+//
+
+/* --------------------Product, search lists (line)---------------------*/
+.media-list.article-list {
+  background-color: @article-list-background-color;
+  .padding(@article-list-padding);
+  .margin(@article-list-margin);
+  .media {
+    border-bottom: @article-list-media-border-bottom;
+    color: @article-list-media-color;
+    .margin(@article-list-media-margin);
+    .pull-left {
+      width: @article-list-pull-left-width;
+      text-align: @article-list-pull-left-text-align;
+      img {
+        max-width: @article-list-img-max-width;
+      }
+    }
+    .media-body {
+      position: relative;
+      .padding(@article-list-media-body-padding);
+    }
+    .media-heading-link {
+      color: @article-list-media-heading-link-color;
+    }
+    &:hover {
+      background-color: @article-list-hover-background-color;
+      color: @article-list-hover-color;
+      cursor: @article-list-hover-cursor;
+      .media-heading-link {
+        color: @article-list-hover-media-heading-link-color;
+      }
+    }
+  }
+  .quantity {
+    text-align: @article-list-quantity-text-align;
+    float: left;
+    .padding(@article-list-quantity-padding);
+    .square(@article-list-quantity-square);
+  }
+}
+
+.article-list-remove {
+  float: @article-list-remove-float;
+}
+
+.article-list-price {
+  margin-bottom: @article-list-price-margin-bottom;
+  .old-price {
+    font-size: @article-list-price-old-price-font-size;
+    color: @article-list-price-old-price-color;
+  }
+  .main-price {
+    font-size: @article-list-price-main-price-font-size;
+  }
+  .vat-percent {
+    color: @article-list-vat-percent-color;
+    .margin(@article-list-vat-percent-margin);
+    display: inline;
+  }
+  .price-per-unit {
+    .font-size(@article-list-price-per-unit-font-size);
+  }
+}
+
+.media:hover .article-list-price {
+  .old-price {
+    color: @article-list-price-old-price-on-color;
+  }
+  .vat-percent {
+    color: @article-list-vat-percent-hover-color;
+  }
+}
+
+.add-to-basket {
+  padding-left: @add-to-basket-padding-left;
+  position: relative;
+  .quantity {
+    position: absolute;
+    left: @add-to-basket-quantity-left;
+    top: @add-to-basket-quantity-top;
+  }
+}
+
+.media:hover .add-to-basket .btn {
+  outline: @add-to-basket-btn-on-outline;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<OX>
+    <OXMENU id="NAVIGATION_ESHOPADMIN">
+        <MAINMENU id="mxorders">
+            <SUBMENU id="mxdisplayorders" cl="admin_order" list="order_list">
+                <TAB id="fcpo_order_title" cl="fcpayone_order" />
+            </SUBMENU>
+        </MAINMENU>
+    </OXMENU>
+    <OXMENU id="fcpo_admin_title">
+        <MAINMENU id="fcpo_admin_information">
+            <SUBMENU id="fcpo_admin_common" cl="fcpayone_common" list="fcpayone_common_list">
+                <TAB id="tbclcountry_main" cl="fcpayone_common_main" />
+            </SUBMENU>
+            <SUBMENU id="fcpo_admin_support" cl="fcpayone_support" list="fcpayone_support_list">
+                <TAB id="tbclcountry_main" cl="fcpayone_support_main" />
+            </SUBMENU>
+        </MAINMENU>
+        <MAINMENU id="fcpo_admin_config">
+            <SUBMENU id="mxpaymeth" cl="admin_payment" list="payment_list"></SUBMENU>
+            <SUBMENU id="fcpo_admin_config_payment" cl="fcpayone_admin" list="fcpayone_list">
+                <TAB id="fcpo_main_title" cl="fcpayone_main" />
+            </SUBMENU>
+            <SUBMENU id="fcpo_admin_config_bonicheck" cl="fcpayone_boni" list="fcpayone_boni_list">
+                <TAB id="fcpo_main_title" cl="fcpayone_boni_main" />
+            </SUBMENU>
+            <SUBMENU id="fcpo_admin_config_status_forwarding" cl="fcpayone_status_forwarding"></SUBMENU>
+            <SUBMENU id="fcpo_admin_config_status_mapping" cl="fcpayone_status_mapping"></SUBMENU>
+            <SUBMENU id="fcpo_admin_config_error_mapping" cl="fcpayone_error_mapping"></SUBMENU>
+        </MAINMENU>
+        <MAINMENU id="fcpo_admin_protocol">
+            <SUBMENU id="fcpo_main_log" cl="fcpayone_protocol" list="fcpayone_log_list">
+                <TAB id="fcpo_main_log" cl="fcpayone_log" />
+            </SUBMENU>
+            <SUBMENU id="fcpo_admin_api_logs" cl="fcpayone_apilog_main" list="fcpayone_apilog_list">
+                <TAB id="fcpo_admin_api_logs" cl="fcpayone_apilog" />
+            </SUBMENU>
+            <SUBMENU id="mxdisplayorders" cl="admin_order" list="order_list"></SUBMENU>
+        </MAINMENU>
+    </OXMENU>
+</OX>

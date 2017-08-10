@@ -1,0 +1,711 @@
+//
+// This file is part of OXID eSales mobile theme.
+//
+// OXID eSales mobile theme is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// OXID eSales mobile theme is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with OXID eSales mobile theme.  If not, see <http://www.gnu.org/licenses/>.
+//
+// @link      http://www.oxid-esales.com
+// @copyright (C) OXID eSales AG 2003-2013
+//
+
+// Custom variables
+
+@body-background-color:   #000000;
+@body-text-color:         #ffffff;
+
+// Brand colors
+@brand-primary-light:     #73bacb;
+@brand-primary:           #50a9be;
+@brand-primary-dark:      #1d7e96;
+
+@brand-secondary-light:   #eeeeee;
+@brand-secondary:         #cccccc;
+@brand-secondary-dark:    #666666;
+@brand-secondary-darker:  #232323;
+
+@brand-danger:            #b81c00;
+@brand-note:              #eb6005;
+
+@h1-font-size:                         1.333em;
+@h1-line-height:                       @h1-font-size * @line-height-base;
+@h1-margin:                            0;
+
+@h2-font-size:                         1.222em;
+@h2-line-height:                       @h2-font-size * @line-height-base;
+
+@h3-font-size:                         1.111em;
+@h3-line-height:                       @h3-font-size * @line-height-base;
+
+@h4-font-size:                         1em;
+@h4-line-height:                       @h3-font-size * @line-height-base;
+
+@page-heading-padding:                 17px;
+@page-heading-text-transform:          uppercase;
+
+
+@order-padding:                        0 15px;
+@order-margin:                         0 0 2px 0;
+@order-list-style:                     none;
+@order-background:                     @brand-secondary-darker;
+@order-row-border:                     1px solid @brand-secondary-dark;
+@order-row-padding:                    10px 0;
+@order-row-last-border-bottom:         none;
+@order-details-color:                  @body-text-color;
+@order-details-row-strong-color:       @brand-secondary-dark;
+@order-details-row-strong-text-transform: uppercase;
+@order-details-link-color:             @order-details-color;
+@order-details-date-margin-right:      20px;
+@order-list-margin:                    0;
+@order-list-margin-li:                 0 0 2px 0;
+@order-list-style:                     none;
+@order-article-background-color:       @brand-secondary-light;
+@order-article-border-color:           @brand-secondary;
+@order-article-link-color:             @body-background-color;
+@order-articles-padding-left:          20px;
+
+@alerts-margin:             5px 0;
+@alerts-padding:            8px 15px;
+@alerts-padding-with-icon:  8px 15px 8px 30px;
+@alerts-padding-in-form:    8px 0;
+@alerts-p-margin:           0;
+@alerts-error-background:   url(../../img/error-inline.png) no-repeat 12px 13px #ffe7e3;
+@alerts-success-background: url(../../img/success-inline.png) no-repeat 12px 13px #f8ffe3;
+
+@article-list-background-color:               @body-text-color;
+@article-list-color:                          @body-background-color;
+@article-list-padding:                        0;
+@article-list-margin:                         0 0 3px 0;
+@article-list-media-border-bottom:            1px solid @brand-secondary;
+@article-list-media-color:                    @brand-primary-dark;
+@article-list-media-margin:                   0;
+@article-list-pull-left-width:                100px;
+@article-list-pull-left-text-align:           center;
+@article-list-img-max-width:                  100%;
+@article-list-media-body-padding:             10px;
+@article-list-media-heading-link-color:       @article-list-color;
+@article-list-hover-background-color:         @brand-primary;
+@article-list-hover-color:                    @article-list-background-color;
+@article-list-hover-cursor:                   pointer;
+@article-list-hover-media-heading-link-color: inherit;
+@article-list-remove-float:                   right;
+@article-list-price-margin-bottom:            10px;
+@article-list-price-old-price-font-size:      1em;
+@article-list-price-old-price-color:          @article-list-color;
+@article-list-price-main-price-font-size:     1.222em;
+@article-list-price-old-price-on-color:       inherit;
+@article-list-price-per-unit-font-size:       0.6em;
+@article-list-vat-percent-color:              @brand-primary-light;
+@article-list-vat-percent-margin:             0 5px;
+@article-list-vat-percent-hover-color:        inherit;
+@article-list-quantity-text-align:            center;
+@article-list-quantity-square:                40px;
+@article-list-quantity-padding:               0;
+
+@add-to-basket-padding-left:   50px;
+@add-to-basket-quantity-left:  0;
+@add-to-basket-quantity-top:   0;
+@add-to-basket-btn-on-outline: 2px solid #ffffff;
+
+@order-history-article-quantity-color:        @brand-primary-dark;
+@order-history-article-quantity-float:        left;
+@order-history-article-quantity-margin-right: 5px;
+
+@basket-articles-border-color:            @brand-secondary;
+@basket-articles-border-top:              1px solid @basket-articles-border-color;
+@basket-articles-margin-bottom:           10px;
+@basket-functions-margin-bottom:          15px;
+@basket-functions-color:                  @brand-primary;
+@basket-functions-cursor:                 pointer;
+@basket-summary-margin-bottom:            15px;
+@basket-summary-width:                    100%;
+@basket-summary-padding:                  5px 0;
+@basket-summary-heading-text-align:       left;
+@basket-summary-heading-font-weight:      normal;
+@basket-summary-text-align:               right;
+@basket-summary-text-color:               @brand-primary-dark;
+@basket-total-price-border-top:           2px solid @basket-articles-border-color;
+@basket-total-price-font-weight:          bold;
+
+@btn-border-color:                    @brand-secondary;
+@btn-border:                          0;
+@btn-background-color:                @brand-primary;
+@btn-color:                           @body-text-color;
+@btn-active-background-color:         @brand-note;
+@btn-active-color:                    @btn-color;
+@btn-lighter-color:                   @brand-primary;
+@btn-small-width:                     auto;
+@btn-small-padding-vertical:          @padding-small-vertical;
+@btn-small-padding-horizontal:        @padding-small-horizontal;
+@btn-small-font-weigth:               normal;
+@btn-text-transform:                  uppercase;
+@btn-cursor:                          pointer;
+@btn-width:                           100%;
+@btn-font-size:                       1.111em;
+@btn-font-weigth:                     bold;
+@btn-glyphicon-vertical-align:        middle;
+@btn-disabled-background-color:       @brand-secondary;
+@btn-disabled-cursor:                 default;
+@btn-disabled-hover-background-color: @btn-disabled-background-color;
+@btn-previous-background-color:       @brand-secondary;
+@btn-previous-color:                  @brand-secondary-dark;
+@btn-previous-border:                 @btn-border;
+@btn-remove-background-color:         @brand-secondary-light;
+@btn-remove-color:                    @brand-danger;
+@btn-remove-border:                   1px solid @btn-border-color;
+@btn-update-background-color:         @brand-secondary-light;
+@btn-update-color:                    @btn-lighter-color;
+@btn-update-border:                   1px solid @btn-border-color;
+@btn-wishlist-background-color:       @brand-secondary-light;
+@btn-wishlist-color:                  @btn-lighter-color;
+@btn-wishlist-border:                 1px solid @btn-border-color;
+@btn-wishlisted-color:                @brand-note;
+@btn-input-width:                     @btn-width;
+@btn-default-bg:                      @btn-background-color;
+@btn-default-border:                  @btn-default-bg;
+
+@checkout-options-margin-top:         15px;
+@checkout-option-about-color:         @brand-secondary;
+
+@checkout-order-color: @brand-secondary-dark;
+
+@payment-select-payment-row-first-of-type-margin-top: 0px;
+@payment-select-payment-row-margin-top:               15px;
+@payment-select-payment-padding:                      0px 12px;
+@payment-select-payment-color:                        @brand-secondary-dark;
+@payment-select-payment-font-size:                    1em;
+@payment-select-note-color:                           @brand-secondary-dark;
+@payment-select-card-valid-date-month-width:          75px;
+@payment-select-card-valid-date-year-width:           95px;
+@payment-select-card-valid-date-divider-padding:      0px 5px;
+
+@steps-background:                         @brand-secondary-light;
+@steps-list-style:                         none;
+@steps-padding:                            0 0 0 15px;
+@steps-margin:                             0 0 15px 0;
+@steps-height:                             32px;
+@steps-after-content:                      " ";
+@step-float:                               left;
+@step-color:                               @brand-secondary-dark;
+@step-padding:                             0 15px 0 28px;
+@step-before-content:                      " ";
+@step-before-float:                        @step-float;
+@step-before-background:                   url("../../img/steps_small.png") -30px 0 no-repeat transparent;
+@step-before-margin-left:                  -43px;
+@step-first-child-margin-left:             0;
+@step-first-child-before-background-color: #ffffff;
+@step-last-step-background:                @brand-primary;
+@step-last-child-padding-right:            0;
+@step-last-font-size:                      0.778em;
+@step-last-font-weight:                    bold;
+@step-last-color:                          @step-color;
+@step-active-color:                        #ffffff;
+@step-active-background-position:          -15px 0;
+@step-passed-background-position:          0 0;
+@step-active-link-color:                   @step-active-color;
+@step-active-background:                   @brand-primary;
+@step-passed-background:                   @brand-secondary-dark;
+@step-link-color:                          @brand-primary;
+@step-number-border-right:                 1px solid @brand-primary-light;
+@step-number-border-right-wider:           2px solid @brand-primary-light;
+@step-number-font-size:                    1em;
+@step-number-line-height:                  @steps-height;
+@step-number-padding:                      0 1px;
+@step-name-font-size:                      0.778em;
+@step-name-white-space:                    normal;
+@step-name-vertical-align:                 middle;
+@step-name-padding:                        0;
+@step-name-line-height:                    16px;
+@step-name-height:                         @steps-height;
+@step-name-max-width:                      75px;
+
+@checkout-thank-you-color:                    @brand-secondary-dark;
+@checkout-thank-you-blockhead-color:          @brand-note;
+@checkout-thank-you-blockhead-text-transform: uppercase;
+@checkout-thank-you-blockhead-border:         1px solid @brand-secondary;
+
+@contact-form-message-height: 150px;
+
+@cookie-note-width:               100%;
+@cookie-note-z-index:             105;
+@cookie-note-font-weight:         normal;
+@cookie-note-font-size:           0.889em;
+@cookie-note-color:               @body-text-color;
+@cookie-note-background-color:    @brand-note;
+@cookie-note-opacity:             0.9;
+@cookie-note-filter:              alpha(opacity=90);
+@cookie-note-padding:             8px 0 8px 0;
+@cookie-note-text-align:          center;
+@cookie-note-border-bottom:       1px solid @cookie-note-background-color;
+@cookie-note-notify-padding:      0 40px;
+@cookie-note-dismiss-cursor:      pointer;
+@cookie-note-dismiss-right:       10px;
+@cookie-note-dismiss-top:         8px;
+@cookie-note-dismiss-width:       18px;
+@cookie-note-dismiss-height:      18px;
+@cookie-note-dismiss-text-indent: -9999px;
+@cookie-note-dismiss-background:  url(../../img/close.png) no-repeat 0 0;
+@cookie-note-link-color:          @cookie-note-color;
+@cookie-note-link-text-decoration: underline;
+@cookie-note-link-font-weight:    bold;
+@cookie-note-page-padding-top:    35px;
+
+@datepicker-container-max-height:             none;
+@datepicker-container-input-background-color: transparent;
+@datepicker-container-input-text-align:       center;
+@datepicker-container-border-left:            solid 10px transparent;
+@datepicker-container-border-first-child:     none;
+
+@main-nav-list-icon-width:             60px;
+@main-nav-list-border-top:             1px solid @brand-primary-light;
+@main-nav-list-link-active-background-color: @brand-note;
+@main-nav-list-link-active-color:            @body-text-color;
+@main-nav-list-link-font-size:         1.333em;
+@main-nav-list-link-padding:           0 @main-nav-list-icon-width 0 0;
+@main-nav-list-link-text-transform:    uppercase;
+@main-nav-list-link-icon-right:        18px;
+@main-nav-list-link-icon-top:          50%;
+@main-nav-list-back-padding:           0 0 0 @main-nav-list-icon-width;
+@main-nav-list-back-text-border-left:  @main-nav-list-border-top;
+@main-nav-list-back-icon-left:         @main-nav-list-link-icon-right;
+@main-nav-list-back-icon-right:        auto;
+@main-nav-list-first-child-border-top: none;
+
+@dropdown-z-index:                        1;
+@dropdown-open-z-index:                   2;
+@dropdown-cursor:                         pointer;
+@dropdown-color:                          @brand-primary;
+@dropdown-background-color:               @body-text-color;
+@dropdown-border:                         2px solid @dropdown-color;
+@dropdown-toggle-border:                  @dropdown-border;
+@dropdown-toggle-color:                   @dropdown-color;
+@dropdown-toggle-background-color:        @dropdown-background-color;
+@dropdown-toggle-font-size:               1em;
+@dropdown-toggle-padding-horizontal:      @padding-base-horizontal;
+@dropdown-toggle-padding-vertical:        @padding-base-vertical;
+@dropdown-toggle-arrow-width:             20px;
+@dropdown-toggle-icon-margin-top:         -0.6em;
+@dropdown-menu-min-width:                 0;
+@dropdown-menu-border:                    @dropdown-border;
+@dropdown-menu-border-radius:             0;
+@dropdown-menu-padding:                   5px 0;
+@dropdown-menu-margin:                    -2px 0 0 0;
+@dropdown-menu-width:                     100%;
+@dropdown-option-padding:                 0 5px;
+@dropdown-option-margin:                  0;
+@dropdown-link-color:                     @dropdown-color;
+@dropdown-link-background-color:          @dropdown-background-color;
+@dropdown-link-hover-color:               @dropdown-link-background-color;
+@dropdown-link-hover-background-color:    @dropdown-link-color;
+@dropdown-link-selected-color:            @dropdown-background-color;
+@dropdown-link-selected-background-color: @brand-primary-dark;
+@dropdown-link-padding:                   8px 5px;
+@dropdown-link-white-space:               normal;
+@dropdown-option-title-color:             @dropdown-link-color;
+@dropdown-option-title-background:        @dropdown-link-background-color;
+@dropdown-option-title-padding:           @dropdown-link-padding;
+@dropdown-option-title-white-space:       @dropdown-link-white-space;
+
+@filter-box-padding:                            0 17px 17px;
+@filter-box-closed-cursor:                      pointer;
+@filter-box-closed-btn-text-align:              left;
+@filter-box-opened-text-transform:              uppercase;
+@filter-box-opened-filter-header-padding-right: 45px;
+@filter-open-title-color:                       @body-background-color;
+@filter-open-title-font-size:                   1.111em;
+@filter-open-title-font-weight:                 bold;
+@filter-open-title-background-color:            @brand-secondary-light;
+@filter-open-title-padding:                     @padding-base-vertical @padding-base-horizontal;
+@filter-open-title-width:                       100%;
+@filter-close-color:                            @body-text-color;
+@filter-close-font-size:                        @filter-open-title-font-size;
+@filter-close-background-color:                 @brand-primary;
+@filter-close-padding:                          @padding-base-vertical @padding-base-horizontal;
+@filter-close-right:                            0;
+@filter-close-cursor:                           @filter-box-closed-cursor;
+@filter-box-opened-dropdown-margin:             0;
+@filter-box-opened-filter-title-color:          @brand-secondary-light;
+@filter-box-opened-filter-title-font-size:      @filter-open-title-font-size;
+@filter-box-opened-filter-title-font-weight:    normal;
+@filter-box-opened-filter-title-padding-top:    10px;
+@filter-box-opened-filter-title-padding-left:   10px;
+
+@footer-background-color:                       @brand-secondary-darker;
+@footer-margin:                                 25px 0 20px 0;
+@footer-nav-background-color:                   @footer-background-color;
+@footer-nav-hover-background-color:             @brand-primary;
+@footer-nav-active-background-color:            @brand-note;
+@footer-nav-active-color:                       @body-text-color;
+@footer-nav-border-radius:                      0;
+@footer-nav-link-border:                        none;
+@footer-nav-link-border-radius:                 @footer-nav-border-radius;
+@footer-nav-link-padding:                       20px 0;
+@footer-nav-link-font-size:                     0.778em;
+@footer-nav-link-text-align:                    center;
+@footer-nav-link-text-transform:                uppercase;
+@footer-nav-link-color:                         @brand-primary;
+@footer-nav-link-hover-color:                   @footer-background-color;
+@footer-nav-link-active-color:                  @footer-nav-link-hover-color;
+@footer-nav-link-background-color:              transparent;
+@footer-nav-link-hover-background-color:        @footer-nav-hover-background-color;
+@footer-nav-pills-max-height:                   none;
+@footer-nav-pills-border-color:                 @brand-secondary-dark;
+@footer-nav-pills-border-style:                 solid;
+@footer-nav-pills-border-width:                 1px 0;
+@footer-nav-pills-next-child-border-left-width: 1px;
+@footer-nav-pills-active-color:                 @footer-nav-link-active-color;
+@footer-nav-pills-active-background-color:      @footer-nav-hover-background-color;
+@footer-nav-pills-link-next-child-margin-left:  0;
+@footer-nav-list-padding-top:                   30px;
+@footer-nav-list-next-child-padding-top:        0;
+@footer-nav-list-last-child-padding-bottom:     @footer-nav-list-padding-top;
+
+@form-list-style:                      none;
+@form-padding:                         0;
+@form-margin:                          5px 0;
+@form-row-margin:                      10px 0;
+@form-webkit-inner-spin-button-margin: 0;
+
+@placeholder-text-color:              @brand-secondary;
+
+@inline-elements-small-field-padding: 5px;
+@inline-elements-small-field-width:   130px;
+@inline-elements-small-field-margin:  10px;
+@inline-elements-small-field-top:     0;
+@inline-elements-small-field-right:   0;
+@inline-elements-small-field-left:    0;
+
+@input-border:       @brand-primary;
+@input-border-width: 2px;
+@input-height-base:  0;
+@input-color:        @brand-secondary-dark;
+@input-font-size:    1.111em;
+
+@radiocheckbox-height:              30px;
+@radiocheckbox-width:               @radiocheckbox-height;
+@radiocheckbox-margin:              0;
+@radiocheckbox-inline-margin:       0 0 0 10px;
+@radiocheckbox-inline-first-margin: 0px;
+@radiocheckbox-input-margin:        0;
+@radiocheckbox-cursor:              pointer;
+@radiocheckbox-border:              2px solid @brand-primary;
+@radiocheckbox-color:               transparent;
+@radiocheckbox-font-size:           1em;
+@radiocheckbox-text-align:          center;
+@radiocheckbox-padding:             3px;
+@radiocheckbox-label-margin-left:   5px;
+
+@radio-border-radius:      25px;
+@radio-color:              @body-text-color;
+@radio-checked-background: @brand-primary;
+@radio-checked-color:      @radio-color;
+
+@checkbox-checked-color: @brand-primary;
+
+@areabox-height: 100px;
+
+@glyphicon-font-family: 'Glyphicons Halflings';
+@glyphicon-font-style:  normal;
+@glyphicon-line-height: 1;
+
+@header-padding:                     0;
+@header-background:                  @brand-secondary-darker;
+@header-border-radius:               0;
+@header-margin-bottom:               4px;
+@header-btn-padding:                 0 10px;
+@header-btn-float:                   right;
+@header-btn-background:              @header-background;
+@header-btn-border-left:             1px solid @brand-secondary-dark;
+@header-btn-font-size:               1.333em;
+@header-btn-line-height:             50px;
+@header-btn-width:                   50px;
+@header-btn-disabled-cursor:         default;
+@header-btn-last-child-border-right: none;
+@header-logo-float:                  left;
+@header-logo-max-width:              60%;
+@header-logo-line-height:            50px;
+@header-logo-margin-left:            5px;
+@mini-basket-icon-background:        url('../../img/basket.png') center center no-repeat;
+@mini-basket-icon-background-size:   80% auto;
+@mini-basket-count-top:              3px;
+@mini-basket-count-right:            23px;
+@mini-basket-count-background:       @brand-note;
+@mini-basket-count-color:            @body-text-color;
+@mini-basket-count-z-index:          1;
+@mini-basket-new-item-width:         150px;
+@mini-basket-new-item-white-space:   normal;
+
+@pagination-container-margin:            0 0 3px 0;
+@pagination-container-text-align:        center;
+@pagination-container-background-color:  @brand-secondary-darker;
+@pagination-container-line-height:       0;
+@pagination-margin:                      0;
+@pagination-link-background-color:       @pagination-container-background-color;
+@pagination-link-color:                  @brand-secondary-light;
+@pagination-link-padding:                12px 14px;
+@pagination-link-font-size:              1.333em;
+@pagination-link-width:                  50px;
+@pagination-link-padding:                12px;
+@pagination-link-border:                 none;
+@pagination-link-border-color:           @brand-secondary-dark;
+@pagination-link-border-left:            2px solid @pagination-link-border-color;
+@pagination-link-first-child-border:     @pagination-link-border;
+@pagination-link-hover-background-color: @pagination-container-background-color;
+@pagination-link-hover-color:            @pagination-link-color;
+@pagination-separator-padding:           12px 5px;
+@pagination-prev-next-padding:           12px 14px;
+@pagination-glyphicon-font-size:         0.778em;
+@pagination-page-background-color:       @brand-primary;
+@pagination-bg:                          @pagination-container-background-color;
+@pagination-border:                      @pagination-link-border-color;
+@pagination-active-bg:                   @brand-primary;
+
+@product-details-font-size:                              1em;
+@product-details-margin-top:                             2px;
+@product-title-font-size:                                1.333em;
+@product-description-container-margin-top:               15px;
+@product-description-container-padding-bottom:           30px;
+@product-description-cursor:                             pointer;
+@product-description-glyphicon-chevron-down-color:       @brand-primary;
+@product-description-glyphicon-chevron-down-font-size:   @product-details-font-size;
+@product-description-glyphicon-chevron-down-font-weight: bold;
+@product-header-alert-info-margin-bottom:                10px;
+@product-header-info-width:                              80%;
+@product-header-info-word-wrap:                          normal;
+@product-footer-margin:                                  0 10px 15px 10px;
+@product-attribute-margin-top:                           15px;
+@product-attributes-switch-color:                        @brand-primary;
+@product-attributes-switch-font-size:                    @product-details-font-size;
+@product-attributes-switch-text-transform:               uppercase;
+@product-attributes-switch-font-weight:                  bold;
+@product-price-container-min-width:                      245px;
+@product-price-container-min-height:                     40px;
+@product-price-container-text-align:                     right;
+@product-price-color:                                    @brand-primary-dark;
+@product-price-font-size:                                @product-details-font-size;
+@product-price-old-product-price-margin-left:            5px;
+@product-additional-info-color:                          @brand-primary-dark;
+@product-additional-info-font-size:                      0.8em;
+@product-ratings-bottom:                                 0;
+@product-ratings-left:                                   0;
+@product-ratings-placeholder-background:                 url('../../img/stars.jpg') 0 -20px no-repeat;
+@product-ratings-placeholder-width:                      90px;
+@product-ratings-placeholder-height:                     17px;
+@product-variants-message-color:                         @brand-danger;
+
+@content-background: @body-text-color;
+@content-padding:    15px;
+@color-color:        @body-background-color;
+
+@search-box-container-width:                 100%;
+@search-box-container-margin-top:            0;
+@search-box-container-search-box-border-top: 1px solid @body-background-color;
+@search-box-container-search-box-padding:    10px 65px 10px 10px;
+@search-box-container-btn-small-right:       15px;
+
+@carousel-margin-bottom:                5px;
+@carousel-control-background:           none;
+@carousel-control-z-index:              99;
+@carousel-control-opacity:              1;
+@carousel-control-font-size:            1.222em;
+@carousel-focus-outline:                medium none;
+@carousel-i-top:                        50%;
+@carousel-i-margin-top:                 -0.6em;
+@carousel-i-color:                      @brand-primary;
+@carousel-i-text-shadow-color:          #000000;
+@carousel-i-text-shadow:                -1px 0 @carousel-i-text-shadow-color, 0 1px @carousel-i-text-shadow-color, 1px 0 @carousel-i-text-shadow-color, 0 -1px @carousel-i-text-shadow-color;
+@carousel-i-left:                       15px;
+@carousel-i-right:                      @carousel-i-left;
+@carousel-inner-img-margin:             0 auto;
+@carousel-caption-margin-left:          10px;
+@carousel-caption-padding:              0;
+@carousel-caption-bottom:               10px;
+@carousel-caption-left:                 0;
+
+@sort-items-padding:                             0 17px 17px;
+@sort-items-text-transform:                      uppercase;
+@sort-items-sort-title-color:                    @brand-secondary-light;
+@sort-items-sort-title-font-size:                1em;
+@sort-items-sort-title-font-weight:              normal;
+@sort-items-sort-title-padding-left:             10px;
+@sort-items-sort-title-padding-bottom:           10px;
+@sort-items-label-margin:                        0;
+@sort-items-i-padding-left:                      17px;
+@sort-menu-padding:                              0;
+@sort-menu-option-border-bottom:                 2px solid @brand-secondary;
+@sort-menu-option-text-align:                    center;
+@sort-menu-option-padding:                       0;
+@sort-menu-option-last-child-border-bottom:      none;
+@sort-menu-sort-name-border-bottom:              1px solid @brand-secondary;
+@sort-menu-sort-order-width:                     100%;
+@sort-menu-sort-order-padding:                   0;
+@sort-menu-sort-order-link-border-right:            1px solid @brand-secondary;
+@sort-menu-sort-order-link-last-child-border-right: none;
+
+@oxvalidate-error-font-size:   0.778em;
+@oxvalidate-error-line-height: 18px;
+@oxvalidate-error-color:       @brand-danger;
+@oxvalidate-error-margin:      0;
+@oxvalidate-error-padding:     5px 0px;
+@oxinvalid-color:              @oxvalidate-error-color;
+@oxinvalid-border-color:       @oxinvalid-color;
+@oxinvalid-input-background:   @body-text-color;
+@oxinvalid-select-border:      1px solid @oxinvalid-color;
+@oxinvalid-select-background:  @oxinvalid-input-background;
+
+// Custom variables
+
+// Grays
+// -------------------------
+@gray-lighter:                @brand-secondary; // make it with lighten method
+
+
+// Scaffolding
+// -------------------------
+
+@text-color:                  @body-text-color;
+@body-bg:                     @body-background-color;
+
+// Links
+// -------------------------
+
+@link-hover-color:            @brand-primary;
+@link-hover-text-decoration:  none;
+
+// Typography
+// ------------------------
+@font-family-sans-serif:      "Montserrat", Helvetica, Arial, sans-serif;
+@font-family-serif:           "Montserrat", "Times New Roman", Times, serif;
+@font-family-monospace:       "Montserrat", Menlo, Consolas, "Courier New", monospace;
+
+@font-size-base:              14px;
+@font-size-large:             ceil(@font-size-base / 0.75); // ~24px
+@font-size-small:             ceil(@font-size-base * 0.75); // ~14px
+@font-size-mini:              ceil(@font-size-base / 1.5);  // ~12px
+
+//@line-height-base:            1.714285714; // 24/14
+@line-height-computed:        floor(@font-size-base * @line-height-base); // ~25px
+
+@headings-border-bottom:         1px solid @brand-secondary;
+@headings-font-weight:           500;
+@headings-section-heading-color: @body-background-color;
+
+@padding-base-vertical:          10px;
+@padding-base-horizontal:        12px;
+@padding-small-vertical:         3px;
+@padding-small-horizontal:       5px;
+@padding-large-vertical:         14px;
+@padding-large-horizontal:       18px;
+
+// Based on our CSS
+// -------------------------
+@border-radius-base:          0;
+@border-radius-large:         0;
+@border-radius-small:         0;
+@zindex-dropdown:             9999;
+@component-active-bg:         @brand-primary-light;
+
+
+// Tables
+// -------------------------
+
+//@table-bg:                    transparent; // overall background-color
+@table-bg-accent:             transparent; // for striping
+@table-bg-hover:              transparent; // for hover
+@table-border-color:          transparent; // table and cell border
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Basics of a navbar
+@navbar-color:                @body-text-color;
+@navbar-bg:                   @brand-primary;
+
+// Navbar links
+@navbar-link-color:           @brand-primary;
+@navbar-link-hover-color:     @brand-primary;
+@navbar-link-hover-bg:        @brand-secondary-light;
+
+// Inverted navbar
+@navbar-inverse-color:        @brand-primary;
+@navbar-inverse-bg:           @brand-secondary-darker;
+
+// Inverted navbar links
+@navbar-inverse-link-color:        @navbar-inverse-color;
+@navbar-inverse-link-hover-color:  @navbar-inverse-bg;
+@navbar-inverse-link-hover-bg:     @navbar-inverse-color;
+@navbar-inverse-link-active-color: @navbar-inverse-bg;
+
+// Inverted navbar search
+// Normal navbar needs no special styles or vars
+@navbar-inverse-search-bg:     @brand-secondary-darker;
+@navbar-inverse-search-border: @input-border;
+
+// Form states and alerts
+// -------------------------
+
+@state-warning-text:          @brand-danger;
+@state-warning-bg:            @body-text-color;
+@state-warning-border:        transparent;
+
+@state-danger-text:           @state-warning-text;
+@state-danger-bg:             @state-warning-bg;
+@state-danger-border:         @state-warning-border;
+
+
+// Labels
+// -------------------------
+@label-success-bg:            @body-text-color;
+@label-info-bg:               @body-text-color;
+
+
+// Wells
+// -------------------------
+@well-bg:                     @body-text-color;
+
+// Media queries multipliers
+// -------------------------
+
+@screen-small-font-size-ratio:        1.1;
+@screen-small-line-height-ratio:      @screen-small-font-size-ratio;
+@screen-small-padding-ratio:          1.1;
+@screen-small-padding-vertical-ratio: 1.1;
+@screen-small-padding-horizontal-ratio: 1.1;
+@screen-small-margin-ratio:          1.1;
+@screen-small-margin-vertical-ratio: 1.1;
+@screen-small-margin-horizontal-ratio: 1.1;
+@screen-small-width-ratio:              1.1;
+@screen-small-height-ratio:              1.1;
+
+
+@screen-medium-font-size-ratio: 1.2;
+@screen-medium-line-height-ratio: @screen-medium-font-size-ratio;
+@screen-medium-padding-ratio:          1.2;
+@screen-medium-padding-vertical-ratio: 1.2;
+@screen-medium-padding-horizontal-ratio: 1.2;
+@screen-medium-margin-ratio:          1.2;
+@screen-medium-margin-vertical-ratio: 1.2;
+@screen-medium-margin-horizontal-ratio: 1.2;
+@screen-medium-width-ratio:              1.2;
+@screen-medium-height-ratio:              1.2;
+
+
+@screen-large-font-size-ratio: 1.3;
+@screen-large-line-height-ratio: @screen-large-font-size-ratio;
+@screen-large-padding-ratio:          1.3;
+@screen-large-padding-vertical-ratio: 1.3;
+@screen-large-padding-horizontal-ratio: 1.3;
+@screen-large-margin-ratio:          1.3;
+@screen-large-margin-vertical-ratio: 1.3;
+@screen-large-margin-horizontal-ratio: 1.3;
+@screen-large-width-ratio:              1.3;
+@screen-large-height-ratio:              1.3;

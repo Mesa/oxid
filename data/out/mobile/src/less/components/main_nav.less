@@ -1,0 +1,63 @@
+//
+// This file is part of OXID eSales mobile theme.
+//
+// OXID eSales mobile theme is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// OXID eSales mobile theme is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with OXID eSales mobile theme.  If not, see <http://www.gnu.org/licenses/>.
+//
+// @link      http://www.oxid-esales.com
+// @copyright (C) OXID eSales AG 2003-2013
+//
+
+// ---- main nav list -----------------------------------
+.main-nav-list {
+  li {
+    border-top: @main-nav-list-border-top;
+    a {
+      background-color: @navbar-bg;
+      color: @navbar-color;
+      font-size: @main-nav-list-link-font-size;
+      .padding(@main-nav-list-link-padding);
+      text-transform: @main-nav-list-link-text-transform;
+      span {
+        display: block;
+        .padding(@padding-large-vertical, @padding-large-horizontal);
+      }
+      [class^="glyphicon-"] {
+        margin-top: -0.6em;
+        position: absolute;
+        right: @main-nav-list-link-icon-right;
+        top: @main-nav-list-link-icon-top;
+      }
+      &:hover, &:focus {
+        background-color: @navbar-bg;
+      }
+      &:active {
+        background-color: @main-nav-list-link-active-background-color;
+        color: @main-nav-list-link-active-color;
+      }
+      &.back {
+        .padding(@main-nav-list-back-padding);
+        span {
+          border-left: @main-nav-list-back-text-border-left;
+        }
+        [class^="glyphicon-"] {
+          left: @main-nav-list-back-icon-left;
+          right: @main-nav-list-back-icon-right;
+        }
+      }
+    }
+    &:first-child {
+      border-top: @main-nav-list-first-child-border-top;
+    }
+  }
+}

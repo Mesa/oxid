@@ -1,0 +1,205 @@
+.fcpo_check_error, #fcpo_elv_error, #fcpo_elv_error_blocked, #fcpo_cc_error, #fcpo_ou_error {
+    display: none;
+}
+
+.errorbox {
+     background-color: red;
+     color: white;
+}
+#fcpoSEPAMandateBox {
+    margin-bottom: 35px;
+    color: #515353;
+}        
+.fcpoSEPAMandate {
+    overflow: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 200px;
+    margin: 10px 0 10px 0;
+}
+.fcpoSEPAMandate P {
+    margin: 0 0 18px;
+}
+.fcpoSEPAMandate DL {
+    margin-bottom: 20px;
+}
+.fcpoSEPAMandate DT {
+    float: left;
+    font-weight: normal;
+    width: 250px;
+}
+.fcpoSEPAMandate DD {
+    margin-left: 10px;
+    display: block;
+}
+.fcpoSEPAMandate DD, .fcpoSEPAMandate DT {
+    line-height: 20px;
+}
+.fcpoSEPAMandateCheckbox label {
+    float: left;
+    padding-right: 10px;
+    display: block;
+    margin-bottom: 5px;
+}
+.fcpoSEPAMandateCheckbox {
+    margin-bottom: 20px;
+}
+.fcpoSEPAMandateCheckbox.fcpoMobile{
+     margin-bottom: 50px;
+}
+
+.payolution_installment_payment_table {
+    border: 1px solid #000;
+    padding: 3px;
+    border-spacing: 4px;
+    border-collapse: separate;    
+}
+
+.payolution_installment_payment_table td {
+    width: 33%;
+    max-width: 33%;
+    min-width: 33%;
+    border: 1px solid #000;
+    padding: 3px;
+    border-spacing: 4px;
+    border-collapse: separate;    
+}
+
+.fcpoPayolutionAgreeRed {
+    font-weight:bold;
+    color:red;
+}
+
+.payolution_sum_monthly_rate {
+    font-weight:bold;
+    color:red;
+}
+
+.payolution_installment_offers input[type="radio"]:checked + label { 
+    font-weight: bold; 
+    color: green; 
+} 
+
+.payolution_rates_invisible {
+    display: none;
+}
+
+.payolution_rates_visible {
+    display: block;
+}
+
+.payolution_installment_box_headline {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.payolution_installment_box_subtitle {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.payolution_installment_box_body {
+    font-size: 11px;
+}
+
+.payoltion_installment_bottom {
+    vertical-align: bottom;
+}
+
+.payolution_message_notifiation {
+    border: 1px solid #000;
+    background: lightgoldenrodyellow;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.payolution_message_error {
+    border: 1px solid #000;
+    background: lightcoral;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.payolution_installment_details {
+    position: absolute;
+    bottom: 5px;
+}
+
+.payolution_draft_download {
+    margin-top: 10px;
+}
+
+#payolution_center_animation {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.payolution_draft_download a {
+    text-decoration: underline;
+    color: blue;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#payolution_installment_overview_account_info td {
+    padding: 4px;
+}
+
+/* overwriting OXID base style */
+.payment dl dd.activePayment {
+    display: inline-block;
+}
+
+.fcRow {
+    width: 100%;
+    height: 600px;
+}
+
+.fcCol {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border: 1px solid #000;
+    position: relative;
+    padding-bottom: 45px;
+}
+
+.fcBTN-bot {
+    position: absolute;
+    bottom: 5px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 961px) {
+    .fcCol {
+        float: left;
+    }
+}
+
+@media screen and (min-width: 641px) {
+    .fcCol {
+        min-height: 300px;
+    }
+    .fcCol-1 {
+        width: 50%;
+    }
+    .fcCol-2 {
+        width: 50%;
+    }
+    .fcCol-3 {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .fcRow {
+        display: table;
+    }
+    .fcCol {
+        width: 33.333333333%;
+        display: table-cell;
+    }
+}  

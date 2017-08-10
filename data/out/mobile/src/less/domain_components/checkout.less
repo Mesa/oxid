@@ -1,0 +1,94 @@
+//
+// This file is part of OXID eSales mobile theme.
+//
+// OXID eSales mobile theme is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// OXID eSales mobile theme is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with OXID eSales mobile theme.  If not, see <http://www.gnu.org/licenses/>.
+//
+// @link      http://www.oxid-esales.com
+// @copyright (C) OXID eSales AG 2003-2013
+//
+
+/* ----- Address step ---------------------- */
+.checkout-options .checkout-option + .checkout-option {
+  margin-top: @checkout-options-margin-top
+}
+.checkout-option-about {
+  color: @checkout-option-about-color;
+  text-align: center;
+}
+
+/* ----- Order step -------------------------- */
+.order {
+  color: @checkout-order-color;
+  dd {
+    .margin(0);
+  }
+  .agb .checkout-agb-label {
+    display: inline;
+    vertical-align: bottom;
+    a {
+      vertical-align: bottom;
+    }
+  }
+}
+
+/* ----- Payment step -------------------------- */
+.payment-select {
+  .payment-option {
+    display: none;
+    &.active-payment {
+      display: block;
+    }
+  }
+  .payment-row {
+    &:first-of-type {
+      margin-top: @payment-select-payment-row-first-of-type-margin-top;
+    }
+    margin-top: @payment-select-payment-row-margin-top;
+  }
+  .payment-charge, .payment-desc {
+    .padding(@payment-select-payment-padding);
+    font-size: @payment-select-payment-font-size;
+  }
+  .payment-charge {
+    color: @payment-select-payment-color;
+  }
+  .note {
+    color: @payment-select-note-color;
+  }
+  .card-valid-date-field {
+    display: table-cell;
+  }
+  .card-valid-date-month {
+    width: @payment-select-card-valid-date-month-width;
+  }
+  .card-valid-date-year {
+    width: @payment-select-card-valid-date-year-width;
+  }
+  .card-valid-date-divider {
+    .padding(@payment-select-card-valid-date-divider-padding);
+  }
+  input[name="paymentid"] {
+    display: none;
+  }
+}
+
+/* ----- Thank you page step -------------------------- */
+.checkout-thank-you {
+  color: @checkout-thank-you-color;
+  .block-head {
+    color: @checkout-thank-you-blockhead-color;
+    text-transform: @checkout-thank-you-blockhead-text-transform;
+    border-bottom: @checkout-thank-you-blockhead-border;
+  }
+}

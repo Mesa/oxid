@@ -1,0 +1,58 @@
+//
+// This file is part of OXID eSales mobile theme.
+//
+// OXID eSales mobile theme is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// OXID eSales mobile theme is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with OXID eSales mobile theme.  If not, see <http://www.gnu.org/licenses/>.
+//
+// @link      http://www.oxid-esales.com
+// @copyright (C) OXID eSales AG 2003-2013
+//
+
+.pagination-container {
+  .margin(@pagination-container-margin);
+  text-align: @pagination-container-text-align;
+  background-color: @pagination-container-background-color;
+  line-height: @pagination-container-line-height;
+}
+
+.pagination {
+  .margin(@pagination-margin);
+  li {
+    a {
+      color: @pagination-link-color;
+      font-size: @pagination-link-font-size;
+      border: @pagination-link-border;
+      border-left: @pagination-link-border-left;
+      .padding(@pagination-link-padding, 0);
+      width: @pagination-link-width;
+      &:hover {
+        background-color: @pagination-link-hover-background-color;
+      }
+    }
+    &:first-child a {
+      border: @pagination-link-first-child-border;
+    }
+    .pagination-separator {
+      .padding(@pagination-separator-padding);
+    }
+  }
+  .glyphicon-chevron-left:before,
+  .glyphicon-chevron-right:before {
+    font-size: @pagination-glyphicon-font-size;
+  }
+}
+
+.pagination-page.active,
+.pagination-page.active:hover {
+  background-color: @pagination-page-background-color;
+}

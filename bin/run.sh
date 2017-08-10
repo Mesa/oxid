@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+#  Get script path to ignore the current working directory and execute this script from everywhere
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+pushd ${DIR}
+
+
 case $1 in
 "sql")
     docker exec -i oxid mysql oxid -e "${2}"

@@ -19,15 +19,13 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     php5.6-bcmath \
     php5.6-soap \
     curl \
-    wget \
-    unzip \
     mysql-client \
     && apt-get autoremove -y \
     && apt-get autoclean -y \
     && a2enmod php5.6 \
     && a2enmod rewrite
 
-ENV OXID_VERSION "4.10.4"
+ENV OXID_VERSION "4.10.5"
 
 # PHP configuration
 ENV PHP_ERROR_REPORTING "E_ERROR | E_WARNING | E_PARSE"
@@ -67,24 +65,21 @@ ENV MYSQL_PASSWORD "oxid"
 ENV MYSQL_DATABASE "oxid"
 
 COPY etc/ /etc
+COPY ./data ${DOCKER_DOCUMENT_ROOT}
 
-COPY install.sh /install.sh
-RUN chmod +x /install.sh;
-RUN /install.sh
-
-RUN chown -R www-data:www-data /data; \
-    chmod -R ug+rwx /data; \
-    chmod -R 0770 /data/out/media ; \
-    chmod -R 0770 /data/out/pictures; \
-    chmod -R 0770 /data/log; \
-    chmod -R 0770 /data/tmp; \
-    chmod -R 0770 /data/export; \
-    chmod -R 0440 /data/config.inc.php; \
-    chmod 0770 /data/.htaccess;
+RUN chown -R www-data:www-data ${DOCKER_DOCUMENT_ROOT} ; \
+    chmod -R ug+rwx ${DOCKER_DOCUMENT_ROOT} ; \
+    chmod -R 0770 ${DOCKER_DOCUMENT_ROOT}out/media ; \
+    chmod -R 0770 ${DOCKER_DOCUMENT_ROOT}out/pictures; \
+    chmod -R 0770 ${DOCKER_DOCUMENT_ROOT}log ; \
+    chmod -R 0770 ${DOCKER_DOCUMENT_ROOT}tmp ; \
+    chmod -R 0770 ${DOCKER_DOCUMENT_ROOT}export ; \
+    chmod -R 0440 ${DOCKER_DOCUMENT_ROOT}config.inc.php ; \
+    chmod 0770 ${DOCKER_DOCUMENT_ROOT}.htaccess ;
 
 # Set apache server name to global variable
 RUN echo "ServerName ${APACHE_SERVERNAME}" | tee /etc/apache2/conf-available/fqdn.conf ; \
-    ln -s /etc/apache2/conf-available/fqdn.conf /etc/apache2/conf-enabled/; \
+    ln -s /etc/apache2/conf-available/fqdn.conf /etc/apache2/conf-enabled/ ; \
     chmod 0444 /data/config.inc.php; \
     sed -i "s/Directory \/var\/www\//Directory \$\{DOCKER_DOCUMENT_ROOT\}/" /etc/apache2/apache2.conf; \
     sed -i "s/'<dbHost_ce>'/getenv('MYSQL_HOST')/" /data/config.inc.php; \
@@ -103,8 +98,9 @@ VOLUME /data/out
 
 EXPOSE 80
 
-COPY docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod +x /docker-entrypoint.sh
+RUN chmod +x /etc/docker-entrypoint.sh
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+WORKDIR /data
+
+ENTRYPOINT ["/etc/docker-entrypoint.sh"]
 CMD /usr/sbin/apache2ctl -D FOREGROUND

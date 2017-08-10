@@ -1,0 +1,167 @@
+//
+// This file is part of OXID eSales mobile theme.
+//
+// OXID eSales mobile theme is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// OXID eSales mobile theme is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with OXID eSales mobile theme.  If not, see <http://www.gnu.org/licenses/>.
+//
+// @link      http://www.oxid-esales.com
+// @copyright (C) OXID eSales AG 2003-2013
+//
+
+/* ---- Form elements styles --------------------------- */
+
+.form {
+  list-style: @form-list-style;
+  .padding(@form-padding);
+  .margin(@form-margin);
+  li {
+    .margin(@form-row-margin);
+    .clearfix();
+    > .form {
+      /* padding/margin fix for nested forms */
+      .margin(0);
+      li {
+        &:first-child {
+          margin-top: 0px;
+        }
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  border-width: @input-border-width;
+  color: @input-color;
+  font-size: @input-font-size;
+}
+
+/* Calendar fix for chrome */
+input[type=date] {
+  display: -webkit-inline-flex;
+}
+
+input[type=date]::-webkit-inner-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  .margin(@form-webkit-inner-spin-button-margin);
+}
+
+.placeholder {
+  color: @placeholder-text-color;
+}
+input.placeholder {
+  color: @placeholder-text-color;
+}
+.inline-elements {
+  position: relative;
+  .small-field {
+    .padding-left(@inline-elements-small-field-padding);
+    .padding-right(@inline-elements-small-field-padding);
+    line-height: inherit;
+    .width(@inline-elements-small-field-width);
+    position: absolute;
+    top: @inline-elements-small-field-top;
+  }
+  &.first-small {
+    .padding(0, 0, 0, @inline-elements-small-field-width + @inline-elements-small-field-margin);
+    .small-field {
+      left: @inline-elements-small-field-left;
+    }
+    > .validation-error {
+      margin-left: -(@inline-elements-small-field-width + @inline-elements-small-field-margin);
+    }
+  }
+  &.first-big {
+    .padding(0, @inline-elements-small-field-width + @inline-elements-small-field-margin, 0, 0);
+    .small-field {
+      right: @inline-elements-small-field-right;
+    }
+  }
+}
+
+.areabox {
+  height: @areabox-height;
+}
+
+.checkbox,
+.radio {
+  display: inline-block;
+  position: relative;
+  .padding(0);
+  .margin(@radiocheckbox-margin);
+  cursor: @radiocheckbox-cursor;
+  &.inline {
+    .margin(@radiocheckbox-inline-margin);
+    &:first-of-type {
+      .margin(@radiocheckbox-inline-first-margin);
+    }
+  }
+  input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    .margin(@radiocheckbox-input-margin);
+    cursor: @radiocheckbox-cursor;
+  }
+  label {
+    display: block;
+    border: @radiocheckbox-border;
+    color: @radiocheckbox-color;
+    font-size: @radiocheckbox-font-size;
+    overflow: hidden;
+    text-align: @radiocheckbox-text-align;
+    .padding(@radiocheckbox-padding);
+    height: @radiocheckbox-height;
+    width: @radiocheckbox-width;
+  }
+  + label {
+    margin-left: @radiocheckbox-label-margin-left;
+    cursor: @radiocheckbox-cursor;
+  }
+}
+
+.radio {
+  label {
+    border-radius: @radio-border-radius;
+    color: @radio-color;
+  }
+  input:checked + label {
+    background: @radio-checked-background;
+    color: @radio-checked-color;
+  }
+}
+
+.checkbox {
+  input:checked + label {
+    color: @checkbox-checked-color;
+  }
+}

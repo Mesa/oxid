@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+List of all iframe error codes
+-->
+<payone_errors>
+    <entry>
+        <error_code>invalidCardpan</error_code>
+        <error_message_en></error_message_en>
+        <error_message_de></error_message_de>
+    </entry>
+    <entry>
+        <error_code>invalidCvc</error_code>
+        <error_message_en></error_message_en>
+        <error_message_de></error_message_de>
+    </entry>
+    <entry>
+        <error_code>invalidPanForCardtype</error_code>
+        <error_message_en></error_message_en>
+        <error_message_de></error_message_de>
+    </entry>
+    <entry>
+        <error_code>invalidCardtype</error_code>
+        <error_message_en></error_message_en>
+        <error_message_de></error_message_de>
+    </entry>
+    <entry>
+        <error_code>invalidExpireDate</error_code>
+        <error_message_en></error_message_en>
+        <error_message_de></error_message_de>
+    </entry>
+    <entry>
+        <error_code>invalidIssueNumber</error_code>
+        <error_message_en></error_message_en>
+        <error_message_de></error_message_de>
+    </entry>
+    <entry>
+        <error_code>transactionRejected</error_code>
+        <error_message_en></error_message_en>
+        <error_message_de></error_message_de>
+    </entry>
+</payone_errors>

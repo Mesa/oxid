@@ -1,0 +1,77 @@
+//
+// This file is part of OXID eSales mobile theme.
+//
+// OXID eSales mobile theme is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// OXID eSales mobile theme is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with OXID eSales mobile theme.  If not, see <http://www.gnu.org/licenses/>.
+//
+// @link      http://www.oxid-esales.com
+// @copyright (C) OXID eSales AG 2003-2013
+//
+
+#header {
+  .padding(@header-padding);
+  background: @header-background;
+  border-radius: @header-border-radius;
+  margin-bottom: @header-margin-bottom;
+}
+
+.header-btn {
+  position: relative;
+  .padding(@header-btn-padding);
+  float: @header-btn-float;
+  background: @header-btn-background;
+  .line-height(@header-btn-line-height);
+  border-left: @header-btn-border-left;
+  font-size: @header-btn-font-size;
+  .width(@header-btn-width);
+  &.header-btn-disabled {
+    cursor: @header-btn-disabled-cursor;
+  }
+  &:last-child {
+    border-right: @header-btn-last-child-border-right;
+  }
+}
+
+.header-logo {
+  float: @header-logo-float;
+  max-width: @header-logo-max-width;
+  .line-height(@header-logo-line-height);
+  margin-left: @header-logo-margin-left;
+}
+
+.mini-basket {
+  .mini-basket-icon {
+    display: block;
+    overflow: hidden;
+    background: @mini-basket-icon-background;
+    background-size: @mini-basket-icon-background-size;
+    text-indent: -9999px;
+  }
+  .mini-basket-count {
+    position: absolute;
+    top: @mini-basket-count-top;
+    right: @mini-basket-count-right;
+    background: @mini-basket-count-background;
+    color: @mini-basket-count-color;
+    z-index: @mini-basket-count-z-index;
+    @media screen and (min-width:  @screen-large) {
+      top: @mini-basket-count-top*@screen-large-height-ratio;
+      right: @mini-basket-count-right*@screen-large-width-ratio;
+    }
+  }
+  .mini-basket-new-item {
+    width: @mini-basket-new-item-width;
+    display: block;
+    white-space: @mini-basket-new-item-white-space;
+  }
+}

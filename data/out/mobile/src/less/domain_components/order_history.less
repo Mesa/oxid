@@ -1,0 +1,84 @@
+//
+// This file is part of OXID eSales mobile theme.
+//
+// OXID eSales mobile theme is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// OXID eSales mobile theme is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with OXID eSales mobile theme.  If not, see <http://www.gnu.org/licenses/>.
+//
+// @link      http://www.oxid-esales.com
+// @copyright (C) OXID eSales AG 2003-2013
+//
+
+/* ---- Account [Orders] --------------------------------- */
+
+.order-history-list {
+  list-style: @order-list-style;
+  .margin(@order-list-margin);
+  > li {
+    .margin(@order-list-margin-li);
+  }
+}
+
+.order-history-articles,
+.order-history-details {
+  .padding(@order-padding);
+  .margin(@order-margin);
+  list-style: @order-list-style;
+  background: @order-background;
+  li {
+    border-bottom: @order-row-border;
+    .padding(@order-row-padding);
+    &:last-child {
+      border-bottom: @order-row-last-border-bottom;
+    }
+  }
+}
+
+.order-history-details {
+  li {
+    strong {
+      color: @order-details-row-strong-color;
+      text-transform: @order-details-row-strong-text-transform;
+    }
+    span {
+      color: @order-details-color;
+      &:first-child {
+        margin-right: @order-details-date-margin-right;
+      }
+    }
+    a {
+      color: @order-details-link-color;
+    }
+  }
+}
+
+.order-history-articles {
+  background-color: @order-article-background-color;
+  li {
+    border-color: @order-article-border-color;
+    a {
+      color: @order-article-link-color;
+      display: block;
+      padding-left: @order-articles-padding-left;
+      position: relative;
+      .variants {
+        font-size: @font-size-mini;
+      }
+    }
+  }
+}
+
+.order-history-article-quantity {
+  float: @order-history-article-quantity-float;
+  margin-right: @order-history-article-quantity-margin-right;
+  color: @order-history-article-quantity-color;
+}

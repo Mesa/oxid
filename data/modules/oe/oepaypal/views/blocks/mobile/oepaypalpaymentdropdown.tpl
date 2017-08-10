@@ -1,0 +1,7 @@
+[{if $sPaymentID == "oxidpaypal"}]
+    [{if $oViewConf->isStandardCheckoutEnabled()}]
+        [{$smarty.block.parent}]
+    [{/if}]
+[{else}]
+    [{$smarty.block.parent}]
+[{/if}]

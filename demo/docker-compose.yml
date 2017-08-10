@@ -9,8 +9,9 @@ services:
             - oxid_db:oxid_db
         volumes:
             - "/etc/localtime:/etc/localtime"
-            - "./public/out/my_module:/data/out/my_module"
-            - "./public/modules/my_module:/data/modules/my_module"
+#           - "./data:/data"
+#           - "./public/out/my_module:/data/out/my_module"
+#           - "./public/modules/my_module:/data/modules/my_module"
 
         environment:
             MYSQL_HOST: oxid_db
@@ -27,8 +28,8 @@ services:
         image: mariadb:latest
         container_name: oxid_db
 #       Open ports for external access in development only
-#       ports:
-#           - "3306:3306"
+        ports:
+            - "3306:3306"
         volumes:
             - "./db-dumps/:/docker-entrypoint-initdb.d/"
 

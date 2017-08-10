@@ -8,6 +8,14 @@ This is an unofficial Docker image for OXID eShop Community Edition.
 This images is based on Ubuntu <?= UBUNTU_VERSION ?>, Apache2, PHP 5.6 and the current OXID CE version <?= OXID_VERSION ?>
 
 
+## Changelog
+ 
+##### 10.08.17 
+* Updated to OXID 4.10.5
+* Updated PHP to 5.6.31
+* Flow Theme is now default
+
+
 #### Requirements ####
 You need [docker-compose](https://docs.docker.com/compose/) to create your container and use
 the docker-compose.yml file.

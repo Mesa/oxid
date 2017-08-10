@@ -3,7 +3,15 @@ Oxid Docker
 ===========
 
 This is an unofficial Docker image for OXID eShop Community Edition.
-This images is based on Ubuntu 16.04, Apache2, PHP 5.6 and the current OXID CE version 4.10.4
+This images is based on Ubuntu 16.04, Apache2, PHP 5.6 and the current OXID CE version 4.10.5
+
+## Changelog
+ 
+##### 10.08.17 
+* Updated to OXID 4.10.5
+* Updated PHP to 5.6.31
+* Flow Theme is now default
+
 
 #### Requirements ####
 You need [docker-compose](https://docs.docker.com/compose/) to create your container and use
@@ -31,8 +39,9 @@ services:
             - oxid_db:oxid_db
         volumes:
             - "/etc/localtime:/etc/localtime"
-            - "./public/out/my_module:/data/out/my_module"
-            - "./public/modules/my_module:/data/modules/my_module"
+#           - "./data:/data"
+#           - "./public/out/my_module:/data/out/my_module"
+#           - "./public/modules/my_module:/data/modules/my_module"
 
         environment:
             MYSQL_HOST: oxid_db
@@ -49,8 +58,8 @@ services:
         image: mariadb:latest
         container_name: oxid_db
 #       Open ports for external access in development only
-#       ports:
-#           - "3306:3306"
+        ports:
+            - "3306:3306"
         volumes:
             - "./db-dumps/:/docker-entrypoint-initdb.d/"
 
@@ -148,10 +157,10 @@ MYSQL_DATABASE "oxid"
 
 
 ### Versions: ###
-* OXID eShop Community Edition. 4.10.4 
+* OXID eShop Community Edition. 4.10.5 
 * Apache/2.4.18 (Ubuntu)
 * Ubuntu 16.04 
-* PHP 5.6.30
+* PHP 5.6.31
 
 ##### License #####
 The MIT License (MIT)

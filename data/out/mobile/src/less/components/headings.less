@@ -1,0 +1,56 @@
+//
+// This file is part of OXID eSales mobile theme.
+//
+// OXID eSales mobile theme is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// OXID eSales mobile theme is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with OXID eSales mobile theme.  If not, see <http://www.gnu.org/licenses/>.
+//
+// @link      http://www.oxid-esales.com
+// @copyright (C) OXID eSales AG 2003-2013
+//
+
+h1 {
+  font-size: @h1-font-size;
+  line-height: @h1-line-height;
+  .margin(@h1-margin);
+}
+
+h2 {
+  font-size: @h2-font-size;
+  line-height: @h2-line-height;
+}
+
+h3 {
+  font-size: @h3-font-size;
+  line-height: @h3-line-height;
+}
+
+h4 {
+  font-size: @h4-font-size;
+  line-height: @h4-line-height;
+}
+
+.page-head {
+  .padding(@page-heading-padding);
+  text-transform: @page-heading-text-transform;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-weight: bold;
+  .clearfix();
+  &.section-heading {
+    padding-bottom: 5px;
+    color: @headings-section-heading-color;
+    border-bottom: @headings-border-bottom;
+  }
+}

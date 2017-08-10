@@ -1,0 +1,73 @@
+//
+// This file is part of OXID eSales mobile theme.
+//
+// OXID eSales mobile theme is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// OXID eSales mobile theme is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with OXID eSales mobile theme.  If not, see <http://www.gnu.org/licenses/>.
+//
+// @link      http://www.oxid-esales.com
+// @copyright (C) OXID eSales AG 2003-2013
+//
+
+/*------------------------------sort------------------------------*/
+.sort-items {
+  .padding(@sort-items-padding);
+  text-transform: @sort-items-text-transform;
+  .sort-title {
+    color: @sort-items-sort-title-color;
+    font-size: @sort-items-sort-title-font-size;
+    font-weight: @sort-items-sort-title-font-weight;
+    padding-left: @sort-items-sort-title-padding-left;
+    padding-bottom: @sort-items-sort-title-padding-bottom;
+  }
+  label {
+    .margin(@sort-items-label-margin);
+  }
+  i {
+    padding-left: @sort-items-i-padding-left;
+  }
+}
+
+.dropdown-menu.sort-menu {
+  .padding(@sort-menu-padding);
+  .dropdown-option {
+    border-bottom: @sort-menu-option-border-bottom;
+    text-align: @sort-menu-option-text-align;
+    .padding(@sort-menu-option-padding);
+    .sort-name {
+      border-bottom: @sort-menu-sort-name-border-bottom;
+      display: block;
+    }
+    .sort-order {
+      display: table;
+      width: @sort-menu-sort-order-width;
+      .padding(@sort-menu-sort-order-padding);
+      a {
+        display: table-cell;
+        border-right: @sort-menu-sort-order-link-border-right;
+        &:last-child {
+          border-right: @sort-menu-sort-order-link-last-child-border-right;
+        }
+      }
+    }
+    &:last-child {
+      border-bottom: @sort-menu-option-last-child-border-bottom;
+    }
+    span {
+      background: @dropdown-option-title-background;
+      .padding(@dropdown-option-title-padding);
+      display: block;
+      white-space: @dropdown-option-title-white-space;
+      color: @dropdown-option-title-color;
+    }
+  }
+}

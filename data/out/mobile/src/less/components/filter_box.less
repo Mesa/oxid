@@ -1,0 +1,66 @@
+//
+// This file is part of OXID eSales mobile theme.
+//
+// OXID eSales mobile theme is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// OXID eSales mobile theme is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with OXID eSales mobile theme.  If not, see <http://www.gnu.org/licenses/>.
+//
+// @link      http://www.oxid-esales.com
+// @copyright (C) OXID eSales AG 2003-2013
+//
+
+.filter-box {
+  .padding(@filter-box-padding);
+}
+
+.filter-box-closed {
+  cursor: @filter-box-closed-cursor;
+  .btn {
+    text-align: @filter-box-closed-btn-text-align;
+  }
+}
+
+.filter-box-opened {
+  text-transform: @filter-box-opened-text-transform;
+  font-size: @filter-open-title-font-size;
+  font-width: @filter-open-title-font-weight;
+  .filter-header {
+    padding-right: @filter-box-opened-filter-header-padding-right;
+    position: relative;
+  }
+  .filter-open-title {
+    color: @filter-open-title-color;
+    background-color: @filter-open-title-background-color;
+    .padding(@filter-open-title-padding);
+    width: @filter-open-title-width;
+    display: inline-block;
+  }
+  .filter-close {
+    color: @filter-close-color;
+    background-color: @filter-close-background-color;
+    .padding(@filter-close-padding);
+    right: @filter-close-right;
+    position: absolute;
+    display: inline-block;
+    cursor: @filter-close-cursor;
+  }
+  .dropdown {
+    .margin(@filter-box-opened-dropdown-margin);
+  }
+  .filter-title {
+    color: @filter-box-opened-filter-title-color;
+    font-size: @filter-box-opened-filter-title-font-size;
+    font-weight: @filter-box-opened-filter-title-font-weight;
+    padding-top: @filter-box-opened-filter-title-padding-top;
+    padding-left: @filter-box-opened-filter-title-padding-left;
+  }
+}
