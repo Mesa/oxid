@@ -1,2 +1,5 @@
 .idea/
 demo/public
+tmp/
+nohup.out
+src/
