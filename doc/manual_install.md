@@ -7,7 +7,7 @@ named ```MYSQL_HOST``` ```MYSQL_USER``` ```MYSQL_DATABASE``` and ```MYSQL_PASSWO
 version: '2'
 services:
     oxid:
-        image: mesa/oxid:1.1.6
+        image: mesa/oxid:latest
         container_name: oxid
         ports:
             - "80:80"

@@ -13,9 +13,9 @@ These containers are build for development purposes and not for production. I wa
 for different OXID and PHP versions.
 
 ## Tags
-* latest [README](https://github.com/Mesa/oxid/tree/master/tags/latest/README.md)
-* php5.6 [README](https://github.com/Mesa/oxid/tree/master/tags/php5.6/README.md) - composer - IONCUBE - Zend Guard Loader - XDEBUG
-* php7.0 [README](https://github.com/Mesa/oxid/tree/master/tags/php7.0/README.md) - composer - XDEBUG
+* latest
+* php5.6 - composer - IONCUBE - Zend Guard Loader - XDEBUG
+* php7.0 - composer - XDEBUG
 
 ## Changelog
 
@@ -31,7 +31,7 @@ You need:
 
 #### Single container
 If you want to run only one oxid container for testing the latest OXID version (4.10.5) you can go with
-the ```1.1.6``` or ```latest``` tag. All information to get oxid up in running in no time is
+the ```latest``` tag. All information to get oxid up in running in no time is
 located [here](https://github.com/Mesa/oxid/tree/master/tags/latest/README.md)
 
 #### Development setup
