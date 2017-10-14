@@ -50,8 +50,13 @@ ENV APACHE_LOCK_DIR "/var/lock/apache"
 ENV APACHE_PID_FILE "/tmp/apache2.pid"
 ENV APACHE_SERVERNAME "localhost"
 
+# admin credentials are updated on every container start
+ENV OXID_ADMIN_PASSWORD "docker"
+ENV OXID_ADMIN_USERNAME "docker"
+
 # OXID configuration for config.inc.php
 ENV OXID_SHOP_URL "http://localhost"
+ENV OXID_SHOP_SSL_URL "https://localhost"
 ENV OXID_UTF_MODE 1
 ENV OXID_IDEBUG 0
 ENV OXID_COMPILE_DIR "/data/tmp"

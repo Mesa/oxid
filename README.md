@@ -39,7 +39,6 @@ When you want to test your module on multiple PHP Versions or not the latest oxi
 under [doc/development_setup.md](https://github.com/Mesa/oxid/tree/master/doc/development_setup.md).
 
 
-
 #### More Infromation
 - Environment Variables [doc/variables](https://github.com/Mesa/oxid/tree/master/doc/variables.md)
 - Manual Installation [doc/manual_install](https://github.com/Mesa/oxid/tree/master/doc/manual_install.md)
