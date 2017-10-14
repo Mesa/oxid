@@ -133,7 +133,16 @@ SQL from you host machine on the Database container by executing:
 This also applies to all other sql you want to execute, just omitt
 
 
-## Reset password
+### Backup Database ###
+
+Change database name, user and password to your config values.
+
+```bash
+docker exec -i oxid_db mysqldump database_name -u database_user -pdatabase_password > oxid.sql
+```
+
+
+### Reset password ###
 
 When you lost your Admin password you can reset it to you environment variables `OXID_ADMIN_PASSWORD` and `OXID_ADMIN_USERNAME`
 with the new script.
@@ -144,7 +153,7 @@ or
 
     docker-compose exec php7.0 /etc/reset_admin.sh
 
-The variable can be defined in your docker-compose.yml.
+The variable can be defined in your `docker-compose.yml`.
 
 Or you can do it by hand with this script
 

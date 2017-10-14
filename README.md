@@ -35,17 +35,9 @@ the ```1.1.6``` or ```latest``` tag. All information to get oxid up in running i
 located [here](https://github.com/Mesa/oxid/tree/master/tags/latest/README.md)
 
 #### Development setup
-When you want to test your module on multiple PHP Versions, not the latest oxid version, then you find all information
+When you want to test your module on multiple PHP Versions or not the latest oxid version, then you find all information
 under [doc/development_setup.md](https://github.com/Mesa/oxid/tree/master/doc/development_setup.md).
 
-
-### Backup ###
-
-Change database name, user and password to your config values.
-
-```bash
-docker exec -i oxid_db mysqldump database_name -u database_user -pdatabase_password > oxid.sql
-```
 
 
 #### More Infromation
