@@ -1,12 +1,12 @@
 Development Setup
 =================
 
-For development purposes you can start all container and mount the src folder to all of them.
+For development purposes you can start all container at the same time and mount the src folder to all of them.
+Every container binds to a different port on your host machine.
 
 
 Create your `docker-composer.yml` and past the following code:
 
-[docker-compose.yml - RAW](https://raw.githubusercontent.com/Mesa/oxid/master/docker-compose.yml)
 ```yaml
 version: '3'
 
@@ -63,8 +63,9 @@ services:
         - "3306:3306"
       volumes:
         - oxid_db:/var/lib/mysql
-    # Mount your DB dumps here
-    #   - ./db-dumps/:/docker-entrypoint-initdb.d/
+
+# Mount your DB dumps here
+#       - ./db-dumps/:/docker-entrypoint-initdb.d/
       environment:
         MYSQL_ROOT_PASSWORD: root
         MYSQL_DATABASE: oxid
@@ -72,6 +73,7 @@ services:
         MYSQL_PASSWORD: oxid
 
 ```
+[docker-compose.yml - (RAW)](https://raw.githubusercontent.com/Mesa/oxid/master/docker-compose.yml)
 
 Now everything is prepared for docker, you can start up all containers by executing
 
@@ -82,11 +84,16 @@ docker-compose up -d
 The startup process will take some time, be patient and wait a minute.
 
 ## Install OXID
-With the last update I added the posibility to install OXID eshop from Github through a bash script.
+With the last update I added the posibility to install OXID eshop from Github with a bash script.
 
 Just execute ```/etc/install_oxid.sh``` inside your docker container. For example with:
 
+    docker-compose exec [docker-container-name] /etc/install_oxid.sh [oxid-version]
+
+for example:
+
     docker-compose exec php5.6 /etc/install_oxid.sh v4.10.5
+
 
 You can specifiy a OXID version number to install or leave the parameter empty. The optional parameter will default to
 the latest OXID version (currently v4.10.5).
@@ -97,12 +104,13 @@ OXID Version numbers are branch names or tag names from github, like:
 * v4.10.5
 * v6.0.0-rc2
 
+but note the leading char "v". This is required and its to easy to forget.
 
 ## Setup
 Now you can setup your Project by visiting [http://localhost:8082/setup/](http://localhost:8082) and follow the
 installation steps.
 
-Remember the values you defined in your `docker-compose.yml`. When you are asked for the Database host, you enter `oxid_db`
+Remember the values you defined in your `docker-compose.yml`. You enter `oxid_db`, when promted for the Database host,
 because this is the id and domain name you defined by "linking" the container with `oxid_db`
 
     php5.6:
@@ -110,7 +118,16 @@ because this is the id and domain name you defined by "linking" the container wi
       links:
         - oxid_db
 
-The default values for MySQL Database, username and password are `oxid`.
+The default values for MySQL Database, username and password are `oxid`. The Database credentials are defined by
+environemnt variables at the `oxid_db` container
+
+```
+environment:
+  MYSQL_ROOT_PASSWORD: root
+  MYSQL_DATABASE:      oxid
+  MYSQL_USER:          oxid
+  MYSQL_PASSWORD:      oxid
+```
 
 ## Import DB
 You want to import your own database dump? No problem, you can access the Database with your own Tools, the port `3306`
@@ -125,13 +142,13 @@ or you can run an manual import you database dump or get the demo dump from [her
 
     curl -OL https://raw.githubusercontent.com/Mesa/oxid/master/demo/db-dumps/oxid.sql
 
-to load the sql from github and save it on oxid.sql. Now you can pass the data to you local mariadb and execute the
+to load the sql from github and save it as oxid.sql. Now you can pass the data to you local mariadb and execute the
 SQL from you host machine on the Database container by executing:
 
     docker-compose exec oxid_db mysql -u root -p < oxid.sql
 
-This also applies to all other sql you want to execute, just omitt
-
+This also applies to all other sql you want to execute, just omit the file redirection and you are ready to go with
+the mysql client.
 
 ### Backup Database ###
 
@@ -165,3 +182,12 @@ Or you can do it by hand with this script
         where oxid = 'oxdefaultadmin';" ${MYSQL_DATABASE}
 
 You have to replace all environment variables with your new values.
+
+
+### Composer ###
+
+You want to install you dependencies, composer is preinstalled and ready to use.
+
+```
+
+```

@@ -14,9 +14,13 @@ services:
         links:
             - oxid_db:oxid_db
         volumes:
-            - "/etc/localtime:/etc/localtime"
-#           - "./data:/data" # Mount your existing project direct
-            # Or you can only mount your modules
+# Some Linux only stuff
+#           - "/etc/localtime:/etc/localtime"
+
+# Mount your existing project direct
+#           - "./data:/data"
+
+# Or you can only mount your modules
 #           - "./public/out/my_module:/data/out/my_module"
 #           - "./public/modules/my_module:/data/modules/my_module"
 
