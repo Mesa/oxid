@@ -11,21 +11,23 @@ config["dbUser"]="MYSQL_USER"
 config["dbPwd"]="MYSQL_PASSWORD"
 config["sAdminEmail"]="DOCKER_SERVER_ADMIN"
 config["sShopURL"]="OXID_SHOP_URL"
-config["sShopURL"]="OXID_SHOP_SSL_URL"
+config["sSSLShopURL"]="OXID_SHOP_SSL_URL"
 config["iUtfMode"]="OXID_UTF_MODE"
 config["sCompileDir"]="OXID_COMPILE_DIR"
 
 
 
-echo "#################"
-echo "Updating config"
-echo "#################"
+echo "#########################"
+echo "#    Updating config    #"
+echo "#########################"
 
 for i in "${!config[@]}"
 do
     sed -i "s/this->${i}.\+/this->${i} = getenv('${config[$i]}');/" ${DOCKER_DOCUMENT_ROOT}config.inc.php
-    grep ${i} ${DOCKER_DOCUMENT_ROOT}config.inc.php
+    grep "this->${i}" ${DOCKER_DOCUMENT_ROOT}config.inc.php
 done
+
+echo "#########################"
 
 NEW_UUID=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 sed -i "s/<captchaKey>/${NEW_UUID}/" ${DOCKER_DOCUMENT_ROOT}config.inc.php
