@@ -20,7 +20,7 @@ for different OXID and PHP versions.
 
 ## Changelog
 
-[CHANGELOG.md](https://github.com/Mesa/oxid/tree/master/CHANGELOG.md)
+[CHANGELOG](https://github.com/Mesa/oxid/tree/master/CHANGELOG)
 
 
 #### Requirements ####
@@ -33,16 +33,16 @@ You need:
 #### Single container
 If you want to run only one oxid container for testing the latest OXID version (4.10.5) you can go with
 the ```latest``` tag. All information to get oxid up in running in no time is
-located [here](https://github.com/Mesa/oxid/tree/master/doc/old_setup.md)
+located [here](https://github.com/Mesa/oxid/tree/master/doc/old_setup)
 
 #### Development setup
 When you want to test your module on multiple PHP Versions or not the latest oxid version, then you find all information
-under [doc/development_setup.md](https://github.com/Mesa/oxid/tree/master/doc/development_setup.md).
+under [doc/development_setup](https://github.com/Mesa/oxid/tree/master/doc/development_setup).
 
 
 #### More Infromation
-- Environment Variables [doc/variables](https://github.com/Mesa/oxid/tree/master/doc/variables.md)
-- Manual Installation [doc/manual_install](https://github.com/Mesa/oxid/tree/master/doc/manual_install.md)
+- Environment Variables [doc/variables](https://github.com/Mesa/oxid/tree/master/doc/variables)
+- Manual Installation [doc/manual_install](https://github.com/Mesa/oxid/tree/master/doc/manual_install)
 
 ##### License #####
 The MIT License (MIT)
