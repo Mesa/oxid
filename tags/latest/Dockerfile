@@ -66,6 +66,10 @@ ENV MYSQL_USER "oxid"
 ENV MYSQL_PASSWORD "oxid"
 ENV MYSQL_DATABASE "oxid"
 
+ENV COMPOSER_ALLOW_SUPERUSER 1
+ENV COMPOSER_NO_INTERACTION 1
+ENV COMPOSER_DISCARD_CHANGES 1
+
 COPY etc/000-default.conf /etc/apache2/site-available/000-default.conf
 COPY etc/php.ini /etc/php5/apache2/php.ini
 COPY etc/docker-entrypoint.sh /etc/docker-entrypoint.sh

@@ -70,3 +70,9 @@ You have to define them for both webserver image and database image.
     MYSQL_USER "oxid"
     MYSQL_PASSWORD "oxid"
     MYSQL_DATABASE "oxid"
+
+
+### Composer ###
+    COMPOSER_ALLOW_SUPERUSER 1
+    COMPOSER_NO_INTERACTION 1
+    COMPOSER_DISCARD_CHANGES 1

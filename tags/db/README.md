@@ -1,7 +1,9 @@
 OXID eShop - Docker
 ===========
 
-This is are unofficial Docker images for OXID eShop Community Edition (for Development purpose).
+The complete documentation can be found on [github](https://mesa.github.io/oxid/).
+
+This are unofficial Docker images for OXID eShop Community Edition (for Development purpose).
 This images are based on Ubuntu, Apache2, PHP and with script based install helper for the OXID eshop CE version of your
 choice.
 
