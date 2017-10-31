@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.1] - 2017-10-31
+### Changed
+- Oxid installation script updated
+- changed oxid temp dir to "/tmp/oxid_tmp" for all container
+- Updated php config and remove opcache error
+- removed typo in variable name
+
+### Added
+- Add my.cnf file to all container for better mysql handline
+- extended mysql 5.5 container and changed default charset and collation to utf-8
+- Added container for php5.5 (unstable)
+- enabled xdebug for remote debugging with PHPStorm
+- added database dumps to project
+
 ## [2.0] - 2017-10-20
 ### Added 
 - CHANGELOG.md

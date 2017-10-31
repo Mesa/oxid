@@ -16,6 +16,7 @@ for different OXID and PHP versions.
 * latest
 * php5.6 - composer - IONCUBE - Zend Guard Loader - XDEBUG
 * php7.0 - composer - XDEBUG
+* db - mysql 5.5 - utf8 ready
 
 ## Changelog
 
@@ -32,7 +33,7 @@ You need:
 #### Single container
 If you want to run only one oxid container for testing the latest OXID version (4.10.5) you can go with
 the ```latest``` tag. All information to get oxid up in running in no time is
-located [here](https://github.com/Mesa/oxid/tree/master/tags/latest/README.md)
+located [here](https://github.com/Mesa/oxid/tree/master/doc/old_setup.md)
 
 #### Development setup
 When you want to test your module on multiple PHP Versions or not the latest oxid version, then you find all information

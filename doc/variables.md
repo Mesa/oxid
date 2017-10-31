@@ -1,7 +1,9 @@
-### Environment Variables ###
+# Environment Variables #
 
 You can change some configuration to match your needs. Just set them in your
 docker-compose.yml and add them to your environment block.
+
+The advantage of environment variables, you can set them different for each container.
 
 ```
 environment:
@@ -9,6 +11,9 @@ environment:
     MYSQL_DATABASE: oxid
     MYSQL_USER: oxid
 ```
+
+
+### PHP ###
 
 Default PHP Variables are named like their counterparts in php.ini
 
@@ -18,6 +23,8 @@ Default PHP Variables are named like their counterparts in php.ini
     PHP_DISPLAY_ERRORS "Off"
     PHP_UPLOAD_MAX_FILESIZE  "8m"
 
+
+### Apache2 ###
 
 Docker VHost configuration variables
 
@@ -38,6 +45,8 @@ Apache2 default configuration values
     APACHE_SERVERNAME "localhost"
 
 
+### OXID ###
+
 Oxid admin user credentials
 
     OXID_ADMIN_PASSWORD "docker"
@@ -49,11 +58,13 @@ OXID configuration from  config.inc.php
     OXID_SHOP_URL "http://localhost"
     OXID_UTF_MODE 1
     OXID_IDEBUG 0
-    OXID_COMPILE_DIR "/tmp"
+    OXID_COMPILE_DIR "/tmp/oxid_tmp"
 
+
+### Database ###
 
 OXID database configuration, equal names for mariaDB/mysql container variables.
-You have to define them for both webserver image and database image
+You have to define them for both webserver image and database image.
 
     MYSQL_HOST "oxid_db"
     MYSQL_USER "oxid"

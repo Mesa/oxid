@@ -33,10 +33,10 @@ services:
             OXID_IDEBUG: 0
             OXID_ADMIN_PASSWORD: oxid
             OXID_ADMIN_USERNAME: oxid
-            OXID_COMPILE_DIR: "/data/tmp"
+            OXID_COMPILE_DIR: "/tmp/oxid_tmp"
 
     oxid_db:
-        image: mariadb:latest
+        image: mesa/oxid:db
         container_name: oxid_db
 #       Open ports for external access in development only
 #       ports:
@@ -54,8 +54,9 @@ services:
 ```
 
 Create a folder named ```db-dumps``` and put the [demo/db-dumps/oxid.sql](demo/db-dumps/oxid.sql) in there.
-During the first image run, the sql dump will be imported, with an existing database (after the first container run)
-the sql dump file will be ignored.
+During the first image run, the sql dump will be imported.
+
+With an existing database (after the first container run) the sql dump file will be ignored.
 
 Execute:
 
