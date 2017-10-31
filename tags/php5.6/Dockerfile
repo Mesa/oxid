@@ -99,8 +99,7 @@ RUN chmod +x /etc/docker-entrypoint.sh ; \
     sed -i "s/;*upload_max_filesize.\+/upload_max_filesize = \${PHP_UPLOAD_MAX_FILESIZE}/" /etc/php/5.6/apache2/php.ini ; \
     echo "xdebug.remote_enable=1" >> /etc/php/5.6/apache2/php.ini ; \
     echo "xdebug.remote_connect_back=1" >> /etc/php/5.6/apache2/php.ini ; \
-    chmod +x /usr/local/bin/composer ; \
-    composer global require "codeception/codeception" --dev ; composer global require "phpunit/phpunit"
+    chmod +x /usr/local/bin/composer ;
 
 VOLUME /data
 
