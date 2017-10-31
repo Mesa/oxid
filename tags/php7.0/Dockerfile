@@ -13,6 +13,7 @@ RUN DEBIAN_FRONTEND=noninteractive ; apt-get update; apt-get -y upgrade --fix-mi
     php7.0-mbstring \
     php7.0-bcmath \
     php7.0-soap \
+    php-xdebug \
     curl \
     unzip \
     git \
@@ -26,10 +27,10 @@ RUN DEBIAN_FRONTEND=noninteractive ; apt-get update; apt-get -y upgrade --fix-mi
 ENV OXID_SRC_URL "https://github.com/OXID-eSales/oxideshop_ce/archive/master.zip"
 
 # PHP configuration
-ENV PHP_ERROR_REPORTING "E_ERROR | E_WARNING | E_PARSE"
+ENV PHP_ERROR_REPORTING "-1"
 ENV PHP_MEMORY_LIMIT "256M"
 ENV PHP_DATE_TIMEZONE "Europe/Berlin"
-ENV PHP_DISPLAY_ERRORS "Off"
+ENV PHP_DISPLAY_ERRORS "On"
 ENV PHP_UPLOAD_MAX_FILESIZE  "8m"
 
 # Apache configuration
@@ -47,15 +48,15 @@ ENV APACHE_PID_FILE "/tmp/apache2.pid"
 ENV APACHE_SERVERNAME "localhost"
 
 # admin credentials are updated on every container start
-ENV OXID_ADMIN_PASSWORD "docker"
-ENV OXID_ADMIN_USERNAME "docker"
+ENV OXID_ADMIN_PASSWORD "oxid"
+ENV OXID_ADMIN_USERNAME "oxid"
 
 # OXID configuration for config.inc.php
 ENV OXID_SHOP_URL "http://localhost"
 ENV OXID_SHOP_SSL_URL "https://localhost"
 ENV OXID_UTF_MODE 1
 ENV OXID_IDEBUG 0
-ENV OXID_COMPILE_DIR "/data/tmp"
+ENV OXID_COMPILE_DIR "/tmp/oxid_tmp"
 
 # OXID configuration, equal names for mariaDB/mysql container vars
 ENV MYSQL_HOST "oxid_db"
@@ -63,20 +64,19 @@ ENV MYSQL_USER "oxid"
 ENV MYSQL_PASSWORD "oxid"
 ENV MYSQL_DATABASE "oxid"
 
-COPY etc/ /etc
-COPY composer.phar /usr/local/bin/composer
-RUN chmod +x /usr/local/bin/composer
+# Add global composer path
+ENV PATH "/root/.composer/vendor/bin:${PATH}"
 
+COPY etc/ /etc/
+COPY composer.phar /usr/local/bin/composer
 
 RUN chmod +x /etc/docker-entrypoint.sh ; \
     chmod +x /etc/install_oxid.sh ; \
     mkdir -p "${DOCKER_DOCUMENT_ROOT}" ; \
     echo "ServerName ${APACHE_SERVERNAME}" | tee /etc/apache2/conf-available/fqdn.conf ; \
     ln -s /etc/apache2/conf-available/fqdn.conf /etc/apache2/conf-enabled/ ; \
-    sed -i "s/Directory \/var\/www\//Directory \$\{DOCKER_DOCUMENT_ROOT\}/" /etc/apache2/apache2.conf
-
-# Change PHP values to environment variables
-RUN sed -i "s/error_reporting.\+/error_reporting = \${PHP_ERROR_REPORTING}/" /etc/php/7.0/cli/php.ini ; \
+    sed -i "s/Directory \/var\/www\//Directory \$\{DOCKER_DOCUMENT_ROOT\}/" /etc/apache2/apache2.conf ; \
+    sed -i "s/error_reporting.\+/error_reporting = \${PHP_ERROR_REPORTING}/" /etc/php/7.0/cli/php.ini ; \
     sed -i "s/error_reporting.\+/error_reporting = \${PHP_ERROR_REPORTING}/" /etc/php/7.0/apache2/php.ini ; \
     sed -i "s/memory_limit.\+/memory_limit= \${PHP_MEMORY_LIMIT}/" /etc/php/7.0/cli/php.ini ; \
     sed -i "s/memory_limit.\+/memory_limit = \${PHP_MEMORY_LIMIT}/" /etc/php/7.0/apache2/php.ini ; \
@@ -85,8 +85,11 @@ RUN sed -i "s/error_reporting.\+/error_reporting = \${PHP_ERROR_REPORTING}/" /et
     sed -i "s/;*display_errors.\+/display_errors= \${PHP_DISPLAY_ERRORS}/" /etc/php/7.0/cli/php.ini ; \
     sed -i "s/;*display_errors.\+/display_errors = \${PHP_DISPLAY_ERRORS}/" /etc/php/7.0/apache2/php.ini ; \
     sed -i "s/;*upload_max_filesize.\+/upload_max_filesize= \${PHP_UPLOAD_MAX_FILESIZE}/" /etc/php/7.0/cli/php.ini ; \
-    sed -i "s/;*upload_max_filesize.\+/upload_max_filesize = \${PHP_UPLOAD_MAX_FILESIZE}/" /etc/php/7.0/apache2/php.ini
-
+    sed -i "s/;*upload_max_filesize.\+/upload_max_filesize = \${PHP_UPLOAD_MAX_FILESIZE}/" /etc/php/7.0/apache2/php.ini ; \
+    echo "xdebug.remote_enable=1" >> /etc/php/7.0/apache2/php.ini ; \
+    echo "xdebug.remote_connect_back=1" >> /etc/php/7.0/apache2/php.ini ; \
+    chmod +x /usr/local/bin/composer ; \
+    composer global require "codeception/codeception" --dev ; composer global require "phpunit/phpunit"
 
 VOLUME /data
 

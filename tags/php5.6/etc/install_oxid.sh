@@ -16,13 +16,12 @@ while [[ $# -gt 0 ]] ; do
     case $key in
         -f)
             FORCE_FRESH="true"
-            logTime "Forcing fresh install of oxid"
+            logTime "Forced install."
         ;;
         -v)
             OXID_VERSION="${2}"
             shift
         ;;
-
         -db|--db)
             logTime "Dropping database anr recreating with character set utf8"
             echo "DROP DATABASE IF EXISTS ${MYSQL_DATABASE}" | mysql -u ${MYSQL_USER} -p${MYSQL_PASSWORD} &>/dev/null
