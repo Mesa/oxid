@@ -3,3 +3,5 @@ demo/public
 tmp/
 nohup.out
 src/
+db-dumps/
+oxid_db/
